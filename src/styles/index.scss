@@ -1,0 +1,18 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  width: 100%;
+  color: var(--color-dark);
+}
+
+#root {
+  height: 100%;
+}

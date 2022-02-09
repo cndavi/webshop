@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-primary: 'Poppins', sans-serif;
+
+  // colors
+  --color-dark: rgb(29, 29, 29);
+  --color-light: #fff;
+  --color-primary: rgb(162, 162, 246);
+  --color-background: rgb(244, 244, 255);
+
+  // spacing
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+
+  // border radius
+  --border-radius: 12px;
+
+  // header height
+  --header-height: 100px;
+}
