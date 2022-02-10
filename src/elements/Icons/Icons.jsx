@@ -1,7 +1,5 @@
-import styles from './Icons.module.scss'
-
 const Icons = ({ Icon, size }) => {
-  return <>{Icon && <Icon className={styles.header__icon} size={size} />}</>
+  return <>{Icon && <Icon size={size} />}</>
 }
 
 export default Icons
