@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mukta:700');
 
 :root {
   --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Mukta', sans-serif;
 
   // colors
   --color-dark: rgb(29, 29, 29);
-  --color-light: #fff;
-  --color-primary: rgb(162, 162, 246);
-  --color-background: rgb(244, 244, 255);
+  --color-light: rgb(244, 244, 255);
+  --color-light-gray: rgb(211, 211, 211);
+  --color-primary: rgb(184, 174, 121);
+  --color-secondary: rgb(184, 212, 203);
 
   // spacing
   --spacing-md: 16px;
