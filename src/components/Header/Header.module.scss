@@ -8,9 +8,18 @@
   padding: 0 1.5rem;
   position: sticky;
   top: 0;
+  z-index: 1000;
+
+  @include breakpoint(sm) {
+    padding: 0 3rem;
+  }
 
   @include breakpoint(md) {
-    padding: 0 3rem;
+    padding: 0 5rem;
+  }
+
+  @include breakpoint(lg) {
+    padding: 0 12rem;
   }
 
   transition: 0.3s ease all;
@@ -19,13 +28,16 @@
     overflow: hidden;
     color: var(--color-light);
     margin: 0 auto;
-    max-width: 1920px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    z-index: 100;
+    max-width: 71.25rem;
+
+    @include breakpoint(lg) {
+      max-width: 100rem;
+    }
 
     &__logo {
       font-size: 1.575rem;
@@ -52,7 +64,7 @@
       align-items: center;
       text-align: center;
       background: rgba(29, 29, 29, 0.9);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(3px);
       transform: translate(0);
       transition: 0.3s ease transform;
 
@@ -76,7 +88,6 @@
           flex-direction: row;
           align-items: center;
           margin-bottom: 0;
-          margin-right: var(--spacing-md);
         }
 
         li {
@@ -85,7 +96,6 @@
 
             @include breakpoint(md) {
               margin-bottom: 0;
-              margin-right: var(--spacing-md);
             }
           }
 
@@ -114,7 +124,6 @@
 
         span {
           font-weight: 200;
-          margin-top: 0.4rem;
         }
       }
 

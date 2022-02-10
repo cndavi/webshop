@@ -28,7 +28,7 @@ const Header = () => {
   }, [])
 
   useEffect(() => {
-    if (size.width > 768 && menuOpen) {
+    if (size.width > 991 && menuOpen) {
       setMenuOpen(false)
     }
   }, [size.width, menuOpen])

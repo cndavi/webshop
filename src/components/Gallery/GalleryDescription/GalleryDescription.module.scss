@@ -1,0 +1,19 @@
+@import './../../../styles//mixins.scss';
+@import './../../../styles//variables.scss';
+
+.gallery__description {
+  font-size: 0.7rem;
+  color: var(--color-dark);
+
+  @include breakpoint(lg) {
+    font-size: 0.8rem;
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__category {
+    font-weight: 400;
+  }
+}

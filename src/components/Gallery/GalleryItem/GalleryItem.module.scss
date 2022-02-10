@@ -1,0 +1,15 @@
+@import './../../../styles//mixins.scss';
+@import './../../../styles//variables.scss';
+
+.gallery {
+  &__item {
+    position: relative;
+
+    &__description {
+      background-color: var(--color-light);
+      pointer-events: none;
+      position: absolute;
+      padding: 2rem;
+    }
+  }
+}
