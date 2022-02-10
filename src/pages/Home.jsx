@@ -1,5 +1,15 @@
+import Hero from '../components/Hero'
+import Gallery from '../components/Gallery'
+import Info from '../components/Info/Info'
+
 const Home = () => {
-  return <h1>Home</h1>
+  return (
+    <>
+      <Hero />
+      <Gallery />
+      <Info />
+    </>
+  )
 }
 
 export default Home
