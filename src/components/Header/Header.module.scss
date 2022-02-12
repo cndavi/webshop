@@ -1,0 +1,81 @@
+@import './../../styles//mixins.scss';
+@import './../../styles//variables.scss';
+
+.header {
+  min-width: 320px;
+  text-align: center;
+  line-height: 1;
+
+  &__banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    &__video {
+      height: 400px;
+      align-self: center;
+
+      @include breakpoint(md) {
+        width: 100%;
+        height: auto;
+        align-self: center;
+      }
+    }
+
+    &__title {
+      background: rgba(17, 17, 17, 0.527);
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      z-index: 1;
+      width: 75%;
+      height: 20%;
+      color: var(--color-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__main {
+        font-size: 1.5rem;
+        font-weight: 200;
+        @include breakpoint(sm) {
+          font-size: 1.7rem;
+        }
+        @include breakpoint(md) {
+          font-size: 1.5rem;
+        }
+        @include breakpoint(lg) {
+          font-size: 1.8rem;
+        }
+
+        span {
+          font-size: 1.7rem;
+          font-weight: 500;
+          @include breakpoint(sm) {
+            font-size: 1.9rem;
+          }
+          @include breakpoint(md) {
+            font-size: 1.8rem;
+          }
+          @include breakpoint(lg) {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    &__seperator {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+    }
+
+    &__breadcrumb {
+      padding: 3rem;
+    }
+  }
+}

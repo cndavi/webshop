@@ -1,0 +1,12 @@
+@import '../../../styles//mixins.scss';
+@import '../../../styles//variables.scss';
+
+.galleryImage {
+  width: 100%;
+  overflow: hidden;
+  img {
+    display: block;
+    @include image();
+    @include hover();
+  }
+}

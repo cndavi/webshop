@@ -1,0 +1,70 @@
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 48em) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: 62em) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+}
+
+@mixin icons() {
+  font-size: 1.275rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button() {
+  padding: 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  color: var(--color-light);
+  background: var(--color-dark);
+  box-shadow: inset 0 0 0 0 var(--color-primary);
+  transition: ease-out 0.5s;
+  font-size: 1rem;
+  outline: none;
+  font-weight: 500;
+  &:hover {
+    box-shadow: inset 700px 0 0 0 var(--color-primary);
+    color: var(--color-dark);
+  }
+}
+
+@mixin hover() {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@mixin image() {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+@mixin productHeader() {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  img {
+    height: 400px;
+    align-self: center;
+    @include breakpoint(md) {
+      width: 100%;
+      height: auto;
+      align-self: center;
+    }
+  }
+}
