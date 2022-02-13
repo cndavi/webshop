@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { VscThreeBars } from 'react-icons/vsc'
+import { HiShoppingBag } from 'react-icons/hi'
+import { MdAccountCircle } from 'react-icons/md'
 import { Link } from 'react-router-dom'
-import CartButton from '../../elements/Buttons/CartButton'
-import LoginButton from '../../elements/Buttons/LoginButton'
 import styles from './Navigation.module.scss'
+import Modal from '../Modal/Modal'
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
+  const [showModal, setShowModal] = useState(false)
 
   const [size, setSize] = useState({
     width: undefined,
@@ -27,13 +29,17 @@ const Header = () => {
   }, [])
 
   useEffect(() => {
-    if (size.width > 991 && menuOpen) {
-      setMenuOpen(false)
+    if (size.width > 991 && showMenu) {
+      setShowMenu(false)
     }
-  }, [size.width, menuOpen])
+  }, [size.width, showMenu])
 
   const menuToggleHandler = () => {
-    setMenuOpen((p) => !p)
+    setShowMenu((prev) => !prev)
+  }
+
+  const openModal = () => {
+    setShowModal((prev) => !prev)
   }
 
   return (
@@ -46,7 +52,7 @@ const Header = () => {
 
           <nav
             className={`${styles.navbar__content__links} ${
-              menuOpen ? styles.isMenu : ''
+              showMenu ? styles.isMenu : ''
             }`}
           >
             <ul>
@@ -56,7 +62,7 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to='/product' onClick={menuToggleHandler}>
+                <Link to='/products' onClick={menuToggleHandler}>
                   Products
                 </Link>
               </li>
@@ -68,21 +74,21 @@ const Header = () => {
             </ul>
           </nav>
 
-          <div className={styles.navbar__content__icons}>
-            <div className={styles.navbar__content__icons__cart}>
-              <Link to='/cart'>
-                <CartButton />
-              </Link>
-            </div>
-            <div className={styles.navbar__content__icons__account}>
-              <Link to='/account'>
-                <LoginButton />
-              </Link>
-            </div>
+          <div className={styles.navbar__content__cart}>
+            <Link to='#'>
+              <HiShoppingBag onClick={openModal} />
+              <Modal showModal={showModal} setShowModal={setShowModal} />
+            </Link>
+          </div>
+
+          <div className={styles.navbar__content__account}>
+            <Link to='/account'>
+              <MdAccountCircle />
+            </Link>
           </div>
 
           <div className={styles.navbar__content__toggle}>
-            {!menuOpen ? (
+            {!showMenu ? (
               <VscThreeBars onClick={menuToggleHandler} />
             ) : (
               <AiOutlineClose onClick={menuToggleHandler} />

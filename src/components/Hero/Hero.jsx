@@ -50,7 +50,7 @@ const Hero = () => (
       </div>
     </div>
     <div className={styles.hero__breadcrumb}>
-      <Link to='product'>
+      <Link to='products'>
         <button className={styles.hero__breadcrumb__button}>View More</button>
       </Link>
     </div>

@@ -1,5 +1,13 @@
+import styles from './Cart.module.scss'
+
 const Cart = () => {
-  return <h1>Cart</h1>
+  return (
+    <>
+      <div className={styles.cart}>
+        <div className={styles.cart__container}></div>
+      </div>
+    </>
+  )
 }
 
 export default Cart

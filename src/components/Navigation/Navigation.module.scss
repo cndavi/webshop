@@ -4,7 +4,7 @@
 .navbar {
   width: 100%;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   background: var(--color-black);
   transition: 0.3s ease all;
   position: sticky;
@@ -64,7 +64,6 @@
       backdrop-filter: blur(3px);
       transform: translate(0);
       transition: 0.3s ease transform;
-      z-index: 300;
 
       @include breakpoint(md) {
         transform: none;
@@ -114,34 +113,19 @@
       }
     }
 
-    &__icons {
-      display: flex;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      font-size: 2rem;
-      transition: 0.3s ease all;
-      position: relative;
-      z-index: 301;
+    &__cart {
+      @include icon();
+    }
 
-      a {
-        color: var(--color-light);
-      }
-
-      &__cart {
-        padding: 0.75rem 1rem;
-      }
-
-      &__account {
-        padding: 0.75rem 1rem;
-      }
+    &__account {
+      @include icon();
     }
 
     &__toggle {
       cursor: pointer;
       display: flex;
       align-items: center;
-      font-size: 2rem;
+      font-size: 1.7rem;
       transition: 0.3s ease all;
       position: relative;
       z-index: 301;
