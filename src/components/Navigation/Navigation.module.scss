@@ -46,6 +46,13 @@
       transition: 0.3s ease all;
       font-size: 1.575rem;
       font-weight: bold;
+      font-family: var(--font-secondary);
+      font-style: italic;
+      letter-spacing: 1px;
+
+      &:hover {
+        color: var(--color-primary);
+      }
     }
 
     &__links {
@@ -100,6 +107,9 @@
             text-decoration: none;
             color: inherit;
             transition: 0.3s ease all;
+            &:hover {
+              color: var(--color-primary);
+            }
 
             @include breakpoint(md) {
               padding: 0.75rem 1.25rem;

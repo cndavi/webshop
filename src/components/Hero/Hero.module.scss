@@ -47,20 +47,8 @@
 
     &__button {
       padding: 0.4rem 2.2rem;
-      text-transform: uppercase;
-      cursor: pointer;
-      font-family: inherit;
-      background: transparent;
-      color: var(--color-primary);
-      border: 2px solid var(--color-primary);
-      transition: ease-out 0.5s;
-      font-size: 1.145rem;
       letter-spacing: 0.5px;
-      font-weight: 500;
-      &:hover {
-        color: var(--color-dark);
-        border: 2px solid var(--color-dark);
-      }
+      @include button();
     }
   }
 }

@@ -11,7 +11,7 @@ const Header = () => {
 
         <div className={styles.header__banner__title}>
           <h1 className={styles.header__banner__title__main}>
-            welcome to <span>VINYL BOX</span>
+            home is where the <span>Vinyl Box</span> is
           </h1>
         </div>
 

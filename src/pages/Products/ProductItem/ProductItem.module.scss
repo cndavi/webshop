@@ -1,0 +1,50 @@
+@import './../../../styles//mixins.scss';
+@import './../../../styles//variables.scss';
+
+.productItem {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  grid-column-start: span 6;
+  grid-column-end: span 6;
+
+  @include breakpoint(md) {
+    grid-column-start: span 4;
+    grid-column-end: span 4;
+  }
+
+  &__image {
+    -o-object-fit: cover;
+    overflow: hidden;
+    object-fit: cover;
+
+    img {
+      @include image();
+      @include hover();
+    }
+  }
+
+  &__description {
+    border-bottom: 1px solid var(--color-light-gray);
+    padding-bottom: 1rem;
+
+    &__main {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+
+      p {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__buttons {
+    padding-top: 1rem;
+
+    button {
+      margin-right: 0.5rem;
+      cursor: pointer;
+    }
+  }
+}

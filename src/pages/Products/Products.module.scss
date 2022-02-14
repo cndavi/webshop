@@ -1,6 +1,41 @@
 @import './../../styles//mixins.scss';
 @import './../../styles//variables.scss';
 
-.products__header {
+.header {
   @include productHeader();
+}
+
+.products {
+  padding: 0 1.5rem;
+  margin: 5rem 0;
+
+  @include breakpoint(sm) {
+    padding: 0 3rem;
+  }
+
+  @include breakpoint(md) {
+    padding: 0 5rem;
+  }
+
+  @include breakpoint(lg) {
+    padding: 0 12rem;
+  }
+
+  &__container {
+    margin: auto;
+    width: 100%;
+    max-width: 71.25rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+
+    @include breakpoint(sm) {
+      grid-gap: 2rem;
+    }
+
+    @include breakpoint(lg) {
+      max-width: 100rem;
+    }
+  }
 }

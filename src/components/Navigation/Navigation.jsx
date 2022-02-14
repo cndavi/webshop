@@ -47,7 +47,7 @@ const Header = () => {
       <div className={styles.navbar}>
         <div className={styles.navbar__content}>
           <Link to='/' className={styles.navbar__content__logo}>
-            <h2>logo</h2>
+            <h3>Vinyl Box</h3>
           </Link>
 
           <nav

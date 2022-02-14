@@ -1,0 +1,12 @@
+@import './../../../styles//mixins.scss';
+@import './../../../styles//variables.scss';
+
+.productDetail__header {
+  @include productHeader();
+}
+
+.productDetail {
+  img {
+    width: 40%;
+  }
+}

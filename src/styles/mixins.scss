@@ -14,6 +14,22 @@
   }
 }
 
+@mixin button() {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  transition: ease-out 0.5s;
+  font-size: 1.045rem;
+  font-weight: 500;
+  &:hover {
+    color: var(--color-dark);
+    border: 2px solid var(--color-dark);
+  }
+}
+
 @mixin icon() {
   padding: 0.75rem 1rem;
   font-size: 1.7rem;
@@ -22,26 +38,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-}
-
-@mixin button() {
-  padding: 0.5rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-family: inherit;
-  width: 100%;
-  border: none;
-  color: var(--color-light);
-  background: var(--color-dark);
-  box-shadow: inset 0 0 0 0 var(--color-primary);
-  transition: ease-out 0.5s;
-  font-size: 1rem;
-  outline: none;
-  font-weight: 500;
-  &:hover {
-    box-shadow: inset 700px 0 0 0 var(--color-primary);
-    color: var(--color-dark);
+    transition: 0.3s ease all;
+    &:hover {
+      color: var(--color-primary);
+    }
   }
 }
 
