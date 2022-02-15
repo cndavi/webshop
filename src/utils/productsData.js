@@ -1,12 +1,13 @@
-import img1 from '../assets/images/recordPlayers/img1.jpg'
-import img2 from '../assets/images/recordPlayers/img2.jpg'
-import img3 from '../assets/images/recordPlayers/img3.jpg'
-import img4 from '../assets/images/recordPlayers/img4.jpg'
-import img5 from '../assets/images/recordPlayers/img5.jpg'
-import img6 from '../assets/images/recordPlayers/img6.jpg'
-import img7 from '../assets/images/recordPlayers/img7.jpg'
-import img8 from '../assets/images/recordPlayers/img8.jpg'
-import img9 from '../assets/images/recordPlayers/img9.jpg'
+import record1 from '../assets/images/recordPlayers/img1.jpg'
+import record2 from '../assets/images/recordPlayers/img2.jpg'
+import record3 from '../assets/images/recordPlayers/img3.jpg'
+import record4 from '../assets/images/recordPlayers/img4.jpg'
+import record5 from '../assets/images/recordPlayers/img5.jpg'
+import record6 from '../assets/images/recordPlayers/img6.jpg'
+
+import vinyl1 from '../assets/images/records/img1.jpg'
+import vinyl2 from '../assets/images/records/img2.jpg'
+import vinyl3 from '../assets/images/records/img3.jpg'
 
 export const productsData = [
   {
@@ -15,7 +16,8 @@ export const productsData = [
     price: 2150,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    image: img1,
+    image: record1,
+    amount: 0,
   },
   {
     id: 1,
@@ -23,7 +25,8 @@ export const productsData = [
     price: 1800,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    image: img2,
+    image: record2,
+    amount: 0,
   },
   {
     id: 2,
@@ -31,39 +34,44 @@ export const productsData = [
     price: 1950,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    image: img3,
+    image: record3,
+    amount: 0,
   },
   {
     id: 3,
-    title: 'Janis Joplin',
+    title: 'Miles Davis Quintet',
     price: 1050,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    image: img4,
+    image: vinyl1,
+    amount: 0,
   },
   {
     id: 4,
-    title: 'Jimi Hendrix',
+    title: 'The Act',
     price: 1150,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    image: img5,
+    image: vinyl2,
+    amount: 0,
   },
   {
     id: 5,
-    title: 'Elvis Presley',
+    title: 'Her',
     price: 1550,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    image: img6,
+    image: vinyl3,
+    amount: 0,
   },
   {
     id: 6,
-    title: 'Ringo Starr',
+    title: 'Jimi Hendrix',
     price: 2400,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    image: img7,
+    image: record4,
+    amount: 0,
   },
   {
     id: 7,
@@ -71,7 +79,8 @@ export const productsData = [
     price: 2750,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    image: img8,
+    image: record5,
+    amount: 0,
   },
   {
     id: 8,
@@ -79,6 +88,7 @@ export const productsData = [
     price: 1750,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    image: img9,
+    image: record6,
+    amount: 0,
   },
 ]
