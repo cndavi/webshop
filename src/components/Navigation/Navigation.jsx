@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { VscThreeBars } from 'react-icons/vsc'
-import { HiShoppingBag } from 'react-icons/hi'
-import { MdAccountCircle } from 'react-icons/md'
+import { FiShoppingCart } from 'react-icons/fi'
+import { VscAccount } from 'react-icons/vsc'
 import { Link } from 'react-router-dom'
+import Badge from '@mui/material/Badge'
 import styles from './Navigation.module.scss'
 import Modal from '../Modal/Modal'
 
@@ -76,14 +77,16 @@ const Header = () => {
 
           <div className={styles.navbar__content__cart}>
             <Link to='#'>
-              <HiShoppingBag onClick={openModal} />
+              <Badge badgeContent={4} color='primary'>
+                <FiShoppingCart onClick={openModal} />
+              </Badge>
               <Modal showModal={showModal} setShowModal={setShowModal} />
             </Link>
           </div>
 
           <div className={styles.navbar__content__account}>
             <Link to='/account'>
-              <MdAccountCircle />
+              <VscAccount />
             </Link>
           </div>
 

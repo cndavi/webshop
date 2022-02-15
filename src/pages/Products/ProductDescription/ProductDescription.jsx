@@ -1,23 +1,34 @@
 import styles from './ProductDescription.module.scss'
-import products from '../../../redux/constants/products'
+import { productsData } from '../../../utils/productsData'
 import { useParams } from 'react-router-dom'
 
 const ProductDescription = () => {
   const productId = useParams()
-  const productDetail = products.filter((x) => x.id == productId.id)
+  const productDetail = productsData.filter((x) => x.id == productId.id)
   const product = productDetail[0]
 
   return (
     <>
-      <div className={styles.productDetail__header}>
-        <img src={require('../../../assets/images/img11.jpg')} alt='Records' />
+      <div className={styles.header}>
+        <img
+          src={require('../../../assets/images/heading/img1.jpg')}
+          alt='Records'
+        />
       </div>
       <div className={styles.productDetail}>
-        <img src={product.image} alt={product.title} />
-        <h3>{product.title}</h3>
-        <p>€{product.price}</p>
-        <p>{product.description}</p>
-        <button>Add to Cart</button>
+        <div className={styles.productDetail__container}>
+          <div className={styles.productDetail__container__item}>
+            <div className={styles.productDetail__container__item__image}>
+              <img src={product.image} alt={product.title} />
+            </div>
+          </div>
+          <div className={styles.productDetail__container__item}>
+            <h3>{product.title}</h3>
+            <p>€{product.price}</p>
+            <p>{product.description}</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
       </div>
     </>
   )

@@ -1,12 +1,52 @@
 @import './../../../styles//mixins.scss';
 @import './../../../styles//variables.scss';
 
-.productDetail__header {
-  @include productHeader();
+.header {
+  @include header();
 }
 
 .productDetail {
-  img {
-    width: 40%;
+  padding: 0 1.5rem;
+  margin: 5rem 0;
+  @include breakpoint(sm) {
+    padding: 0 3rem;
+  }
+  @include breakpoint(md) {
+    padding: 0 5rem;
+  }
+  @include breakpoint(lg) {
+    padding: 0 12rem;
+  }
+
+  &__container {
+    margin: auto;
+    width: 100%;
+    max-width: 71.25rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+    @include breakpoint(sm) {
+      grid-gap: 4rem;
+    }
+
+    &__item {
+      overflow: hidden;
+      grid-column-start: span 12;
+      grid-column-end: span 12;
+      @include breakpoint(sm) {
+        grid-column-start: span 6;
+        grid-column-end: span 6;
+      }
+
+      &__image {
+        -o-object-fit: cover;
+        overflow: hidden;
+        object-fit: cover;
+        img {
+          @include image();
+          @include hover();
+        }
+      }
+    }
   }
 }

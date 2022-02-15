@@ -11,7 +11,7 @@ const Hero = () => (
             <Gallery
               title='Kurt Cobain'
               category='Record Player'
-              imageUrl={require(`../../assets/images/img1.jpg`)}
+              imageUrl={require(`../../assets/images/hero/img1.jpg`)}
             />
           </div>
 
@@ -19,7 +19,7 @@ const Hero = () => (
             <Gallery
               title='Amy Winehouse'
               category='Record Player'
-              imageUrl={require(`../../assets/images/img16.jpg`)}
+              imageUrl={require(`../../assets/images/hero/img2.jpg`)}
             />
           </div>
 
@@ -27,7 +27,7 @@ const Hero = () => (
             <Gallery
               title='Jim Morrison'
               category='Record Player'
-              imageUrl={require(`../../assets/images/img4.jpg`)}
+              imageUrl={require(`../../assets/images/hero/img3.jpg`)}
             />
           </div>
 
@@ -35,7 +35,7 @@ const Hero = () => (
             <Gallery
               title='Janis Joplin'
               category='Record Player'
-              imageUrl={require(`../../assets/images/img15.jpg`)}
+              imageUrl={require(`../../assets/images/hero/img4.jpg`)}
             />
           </div>
 
@@ -43,7 +43,7 @@ const Hero = () => (
             <Gallery
               title='Jimi Hendrix'
               category='Record Player'
-              imageUrl={require(`../../assets/images/img14.jpg`)}
+              imageUrl={require(`../../assets/images/hero/img5.jpg`)}
             />
           </div>
         </div>
