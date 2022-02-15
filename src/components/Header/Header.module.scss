@@ -24,11 +24,8 @@
     }
 
     &__title {
-      background: rgba(17, 17, 17, 0.527);
       position: absolute;
-      top: 35%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
+      top: 30%;
       z-index: 1;
       width: 75%;
       height: 20%;
@@ -39,7 +36,7 @@
 
       &__main {
         font-size: 1.5rem;
-        font-weight: 200;
+        font-weight: 500;
         @include breakpoint(sm) {
           font-size: 1.7rem;
         }

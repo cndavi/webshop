@@ -1,16 +1,20 @@
 import { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { AiOutlineClose } from 'react-icons/ai'
 import { VscThreeBars } from 'react-icons/vsc'
 import { FiShoppingCart } from 'react-icons/fi'
 import { VscAccount } from 'react-icons/vsc'
 import { Link } from 'react-router-dom'
 import Badge from '@mui/material/Badge'
+import Cart from '../Cart/Cart'
 import styles from './Navigation.module.scss'
-import Modal from '../Modal/Modal'
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
-  const [showModal, setShowModal] = useState(false)
+  const [showCart, setShowCart] = useState(false)
+
+  const { totalCount } = useSelector((state) => state.cart)
+  const dispatch = useDispatch()
 
   const [size, setSize] = useState({
     width: undefined,
@@ -39,8 +43,8 @@ const Header = () => {
     setShowMenu((prev) => !prev)
   }
 
-  const openModal = () => {
-    setShowModal((prev) => !prev)
+  const openCart = () => {
+    setShowCart((prev) => !prev)
   }
 
   return (
@@ -77,10 +81,10 @@ const Header = () => {
 
           <div className={styles.navbar__content__cart}>
             <Link to='#'>
-              <Badge badgeContent={4} color='primary'>
-                <FiShoppingCart onClick={openModal} />
+              <Badge badgeContent={totalCount} color='primary'>
+                <FiShoppingCart onClick={openCart} />
               </Badge>
-              <Modal showModal={showModal} setShowModal={setShowModal} />
+              <Cart showCart={showCart} setShowCart={setShowCart} />
             </Link>
           </div>
 

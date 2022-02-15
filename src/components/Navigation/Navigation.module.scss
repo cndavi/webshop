@@ -67,6 +67,12 @@
       backdrop-filter: blur(3px);
       transform: translate(0);
       transition: 0.3s ease transform;
+      letter-spacing: 1.5px;
+      font-size: 1.2rem;
+
+      @include breakpoint(sm) {
+        font-size: 1.1rem;
+      }
 
       @include breakpoint(md) {
         transform: none;

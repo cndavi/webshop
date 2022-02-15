@@ -6,7 +6,7 @@
 }
 
 .products {
-  padding: 0 1.5rem;
+  padding: 0 3rem;
   margin: 5rem 0;
 
   @include breakpoint(sm) {
@@ -28,7 +28,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    grid-gap: 1rem;
+    grid-gap: 3rem;
 
     @include breakpoint(sm) {
       grid-gap: 2rem;
