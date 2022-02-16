@@ -36,23 +36,41 @@ const Cart = ({ showCart, setShowCart }) => {
         <div className={styles.cart} ref={cartRef}>
           <div className={styles.cart__wrapper} showCart={showCart}>
             <div className={styles.cart__wrapper__details}>
-              <h2>Your Cart</h2>
-              {cart.map((item) => (
-                <CartItem key={item.id} {...item} />
-              ))}
+              <div className={styles.cart__wrapper__details__title}>
+                <span
+                  className={styles.cart__wrapper__details__title__divider}
+                ></span>
+                <h2 className={styles.cart__wrapper__details__title__text}>
+                  Your Cart
+                </h2>
+                <span
+                  className={styles.cart__wrapper__details__title__divider}
+                ></span>
+              </div>
+
+              {!totalAmount ? (
+                <div>empty</div>
+              ) : (
+                cart.map((item) => {
+                  return <CartItem key={item.id} {...item} />
+                })
+              )}
             </div>
 
             <div className={styles.cart__wrapper__summary}>
-              <h3>
-                Subtotal <span>€{totalAmount}</span>
-              </h3>
-              <h3>
-                Shipping <span>FREE</span>
-              </h3>
-              <h3>
-                Total Payment <span>€{totalAmount}</span>
-              </h3>
-              <button>Continue Shopping</button>
+              <div className={styles.cart__wrapper__summary__details}>
+                <h3>
+                  Subtotal <span>€{totalAmount}</span>
+                </h3>
+                <h3>
+                  Shipping <span>FREE</span>
+                </h3>
+
+                <h3>
+                  Total Payment <span>€{totalAmount}</span>
+                </h3>
+                <button>Go to checkout</button>
+              </div>
             </div>
 
             <div className={styles.cart__wrapper__close}>

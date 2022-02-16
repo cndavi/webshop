@@ -1,5 +1,5 @@
 import styles from './ScrollToButton.module.scss'
-import handleScroll from '../../../utils/handleScroll'
+import handleScroll from '../../utils/handleScroll'
 
 const ScrollToButton = () => {
   return (

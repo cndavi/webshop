@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
+import { increase } from '../../../redux/actions'
+import { useDispatch } from 'react-redux'
 import styles from './ProductItem.module.scss'
 
 const ProductItem = ({ item }) => {
+  const dispatch = useDispatch()
   return (
     <>
       <div className={styles.productItem}>
@@ -22,7 +25,9 @@ const ProductItem = ({ item }) => {
           <Link to={`/products/${item.id}`}>
             <button>More Info</button>
           </Link>
-          <button>Add to Cart</button>
+          <button onClick={() => dispatch(increase(item.id))}>
+            Add to Cart
+          </button>
         </div>
       </div>
     </>

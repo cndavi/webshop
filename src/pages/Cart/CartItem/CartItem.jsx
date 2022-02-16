@@ -8,6 +8,9 @@ import { increase, decrease, remove } from '../../../redux/actions'
 const CartItem = ({ id, image, title, price, amount }) => {
   const dispatch = useDispatch()
 
+  if (amount === 0) {
+    return <></>
+  }
   return (
     <div className={styles.cartItem}>
       <div className={styles.cartItem__image}>

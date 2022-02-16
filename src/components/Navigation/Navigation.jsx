@@ -6,7 +6,7 @@ import { FiShoppingCart } from 'react-icons/fi'
 import { VscAccount } from 'react-icons/vsc'
 import { Link } from 'react-router-dom'
 import Badge from '@mui/material/Badge'
-import Cart from '../Cart/Cart'
+import Cart from '../../pages/Cart'
 import styles from './Navigation.module.scss'
 
 const Header = () => {
