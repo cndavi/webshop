@@ -1,0 +1,11 @@
+@import './../../../styles//mixins.scss';
+@import './../../../styles//variables.scss';
+
+.cartEmpty {
+  width: 100%;
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+  }
+}

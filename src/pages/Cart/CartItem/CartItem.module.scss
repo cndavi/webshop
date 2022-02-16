@@ -3,5 +3,24 @@
 
 .cartItem {
   display: flex;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+
+  &__description {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icons {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+
+    p {
+      border: 1px solid black;
+      height: 40px;
+      width: 40px;
+      text-align: center;
+    }
+  }
 }

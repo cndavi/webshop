@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getCartTotal, clearItems } from '../../redux/actions'
 import CartItem from './CartItem'
 import styles from './Cart.module.scss'
+import CartEmpty from './CartEmpty/CartEmpty'
 
 const Cart = ({ showCart, setShowCart }) => {
   const { cart, totalAmount } = useSelector((state) => state.cart)
@@ -28,13 +29,13 @@ const Cart = ({ showCart, setShowCart }) => {
 
   useEffect(() => {
     dispatch(getCartTotal())
-  }, [cart])
+  }, [cart, dispatch])
 
   return (
     <>
       {showCart ? (
         <div className={styles.cart} ref={cartRef}>
-          <div className={styles.cart__wrapper} showCart={showCart}>
+          <div className={styles.cart__wrapper}>
             <div className={styles.cart__wrapper__details}>
               <div className={styles.cart__wrapper__details__title}>
                 <span
@@ -48,13 +49,15 @@ const Cart = ({ showCart, setShowCart }) => {
                 ></span>
               </div>
 
-              {!totalAmount ? (
-                <div>empty</div>
-              ) : (
-                cart.map((item) => {
-                  return <CartItem key={item.id} {...item} />
-                })
-              )}
+              <div className={styles.cart__wrapper__details__item}>
+                {!totalAmount ? (
+                  <CartEmpty />
+                ) : (
+                  cart.map((item) => {
+                    return <CartItem key={item.id} {...item} />
+                  })
+                )}
+              </div>
             </div>
 
             <div className={styles.cart__wrapper__summary}>

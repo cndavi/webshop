@@ -13,20 +13,20 @@ const CartItem = ({ id, image, title, price, amount }) => {
   }
   return (
     <div className={styles.cartItem}>
-      <div className={styles.cartItem__image}>
-        <img src={image} alt={title} style={{ width: '5rem' }} />
-      </div>
-
       <div className={styles.cartItem__description}>
-        <h5>{title}</h5>
-        <h5>€{price}</h5>
+        <img src={image} alt={title} style={{ width: '5rem' }} />
+        <div>
+          <h5>{title}</h5>
+          <h5>€{price}</h5>
+        </div>
       </div>
 
-      <div className={styles.cartItem__icons}></div>
-      <BiMinus onClick={() => dispatch(decrease(id))} />
-      <p>{amount}</p>
-      <BiPlus onClick={() => dispatch(increase(id))} />
-      <BiTrashAlt onClick={() => dispatch(remove(id))} />
+      <div className={styles.cartItem__icons}>
+        <BiMinus onClick={() => dispatch(decrease(id))} />
+        <p>{amount}</p>
+        <BiPlus onClick={() => dispatch(increase(id))} />
+        <BiTrashAlt onClick={() => dispatch(remove(id))} />
+      </div>
     </div>
   )
 }
