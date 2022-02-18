@@ -15,7 +15,7 @@ const CartItem = ({ id, image, title, price, amount }) => {
     <div className={styles.cartItem}>
       <div className={styles.cartItem__description}>
         <img src={image} alt={title} style={{ width: '5rem' }} />
-        <div>
+        <div className={styles.cartItem__description__info}>
           <h5>{title}</h5>
           <h5>€{price}</h5>
         </div>
@@ -25,7 +25,10 @@ const CartItem = ({ id, image, title, price, amount }) => {
         <BiMinus onClick={() => dispatch(decrease(id))} />
         <p>{amount}</p>
         <BiPlus onClick={() => dispatch(increase(id))} />
-        <BiTrashAlt onClick={() => dispatch(remove(id))} />
+        <BiTrashAlt
+          onClick={() => dispatch(remove(id))}
+          style={{ marginLeft: '1rem' }}
+        />
       </div>
     </div>
   )

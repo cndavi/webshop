@@ -55,7 +55,7 @@
         align-items: center;
         margin-bottom: 3rem;
         margin-top: 2rem;
-        width: 60%;
+        width: 70%;
         margin: 2rem auto;
 
         &__divider {
@@ -83,7 +83,7 @@
 
       &__item {
         position: relative;
-        width: 60%;
+        width: 70%;
         margin: auto;
         margin-top: 2rem;
         display: flex;
@@ -96,11 +96,10 @@
     &__summary {
       align-items: center;
       line-height: 1.8;
-      padding-top: 2rem;
 
-      &__details {
+      &__total {
         position: relative;
-        width: 60%;
+        width: 70%;
         margin: auto;
 
         h3 {
@@ -115,6 +114,12 @@
           letter-spacing: 0.05rem;
           margin-bottom: 1rem;
           font-size: 1.4rem;
+
+          &:nth-child(3) {
+            @include breakpoint(sm) {
+              margin-top: 6rem;
+            }
+          }
         }
 
         button {

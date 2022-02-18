@@ -1,23 +1,11 @@
 import styles from './Products.module.scss'
-import ProductItem from './ProductItem'
-import { productsData } from '../../utils/productsData'
+import Carousel from '../../components/Carousel'
+import carouselData from '../../utils/carouselData'
 
 const Products = () => {
   return (
     <>
-      <section className={styles.header}>
-        <img
-          src={require('../../assets/images/heading/img2.jpg')}
-          alt='Records'
-        />
-      </section>
-      <section className={styles.products}>
-        <div className={styles.products__container}>
-          {productsData.map((item) => (
-            <ProductItem item={item} key={item.id} />
-          ))}
-        </div>
-      </section>
+      <Carousel slides={carouselData} />
     </>
   )
 }

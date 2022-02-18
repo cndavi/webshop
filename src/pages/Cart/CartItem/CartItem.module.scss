@@ -5,10 +5,17 @@
   display: flex;
   margin-bottom: 2rem;
   justify-content: space-between;
+  width: 100%;
 
   &__description {
     display: flex;
     align-items: center;
+    width: 50%;
+
+    &__info {
+      width: 100%;
+      margin-left: 1rem;
+    }
   }
 
   &__icons {
@@ -17,10 +24,13 @@
     align-items: center;
 
     p {
-      border: 1px solid black;
+      border: 1px solid var(--color-black);
       height: 40px;
       width: 40px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.45rem;
     }
   }
 }
