@@ -32,13 +32,16 @@
 
 @mixin icon() {
   padding: 0.75rem 1rem;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   a {
     color: var(--color-light);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.3s ease all;
+  }
+  @include breakpoint(sm) {
+    font-size: 1.7rem;
   }
 }
 
@@ -56,8 +59,8 @@
 }
 
 @mixin header() {
-  position: relative;
   display: flex;
+  justify-content: center;
   overflow: hidden;
   img {
     height: 400px;
