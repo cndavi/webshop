@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { AiOutlineClose } from 'react-icons/ai'
 import { VscThreeBars } from 'react-icons/vsc'
 import { FiShoppingCart } from 'react-icons/fi'
@@ -13,8 +13,13 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [showCart, setShowCart] = useState(false)
 
+  if (showCart === true) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'unset'
+  }
+
   const { totalCount } = useSelector((state) => state.cart)
-  const dispatch = useDispatch()
 
   const [size, setSize] = useState({
     width: undefined,
@@ -81,8 +86,12 @@ const Header = () => {
 
           <div className={styles.navbar__content__cart}>
             <Link to='#'>
-              <Badge badgeContent={totalCount} color='primary'>
-                <FiShoppingCart onClick={openCart} />
+              <Badge
+                badgeContent={totalCount}
+                color='primary'
+                onClick={openCart}
+              >
+                <FiShoppingCart />
               </Badge>
               <Cart showCart={showCart} setShowCart={setShowCart} />
             </Link>

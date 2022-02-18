@@ -3,6 +3,7 @@
 
 .hero {
   padding: 0 1.5rem;
+
   @include breakpoint(sm) {
     padding: 0 3rem;
   }
@@ -28,8 +29,19 @@
       grid-gap: 1rem;
 
       &__item {
-        grid-column-start: span 4;
-        grid-column-end: span 4;
+        grid-column-start: span 6;
+        grid-column-end: span 12;
+
+        &__hide {
+          @include breakpoint(sm) {
+            display: none;
+          }
+        }
+
+        @include breakpoint(sm) {
+          grid-column-start: span 4;
+          grid-column-end: span 4;
+        }
 
         &__small {
           grid-column-start: span 6;

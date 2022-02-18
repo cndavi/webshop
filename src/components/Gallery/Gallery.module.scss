@@ -11,7 +11,10 @@
       background: var(--color-light);
       pointer-events: none;
       position: absolute;
-      padding: 2rem;
+      padding: 1.2rem;
+      @include breakpoint(sm) {
+        padding: 2rem;
+      }
     }
   }
 }

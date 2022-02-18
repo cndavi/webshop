@@ -31,6 +31,16 @@ const Hero = () => (
             />
           </div>
 
+          <div
+            className={`${styles.hero__container__grid__item} ${styles.hero__container__grid__item__hide}`}
+          >
+            <Gallery
+              title='David Bowie'
+              category='Record Player'
+              imageUrl={require(`../../assets/images/hero/img6.jpg`)}
+            />
+          </div>
+
           <div className={styles.hero__container__grid__item__small}>
             <Gallery
               title='Janis Joplin'
