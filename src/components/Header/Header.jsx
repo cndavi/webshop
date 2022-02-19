@@ -1,5 +1,5 @@
 import styles from './Header.module.scss'
-import ScrollToButton from '../../elements/ScrollToButton'
+import ScrollToButton from '../ScrollToButton'
 
 const Header = () => {
   return (

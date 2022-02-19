@@ -1,0 +1,29 @@
+@import './../../styles//mixins.scss';
+@import './../../styles//variables.scss';
+
+.button {
+  position: absolute;
+  color: var(--color-light);
+  transition: 0.3s ease all;
+  background: var(--color-primary);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-45deg);
+  &:hover {
+    background: var(--color-dark);
+  }
+
+  &__arrow {
+    width: 16px;
+    height: 16px;
+    border-left: solid #fff 2px;
+    border-bottom: solid #fff 2px;
+    border-right: solid transparent 2px;
+    border-top: solid transparent 2px;
+  }
+}

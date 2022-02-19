@@ -1,0 +1,42 @@
+@import './../../../styles//mixins.scss';
+@import './../../../styles//variables.scss';
+
+.header {
+  @include header();
+}
+
+.productDetail {
+  padding: 0 1.5rem;
+  margin: 5rem 0;
+
+  @include breakpoint(sm) {
+    padding: 0 3rem;
+  }
+
+  @include breakpoint(md) {
+    padding: 0 5rem;
+  }
+
+  @include breakpoint(lg) {
+    padding: 0 12rem;
+  }
+
+  &__container {
+    margin: auto;
+    width: 100%;
+    max-width: 71.25rem;
+
+    &__item {
+      &__image {
+        -o-object-fit: cover;
+        overflow: hidden;
+        object-fit: cover;
+
+        img {
+          @include image();
+          @include hover();
+        }
+      }
+    }
+  }
+}

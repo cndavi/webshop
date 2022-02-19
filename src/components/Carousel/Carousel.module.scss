@@ -3,22 +3,31 @@
 
 .container {
   margin: auto;
-  padding: 3rem;
   max-width: 71.25rem;
-  width: 100%;
+  padding: 1rem;
+  @include breakpoint(sm) {
+    padding: 3rem;
+  }
 }
 
 .carousel {
-  height: 760px;
+  height: 270px;
   position: relative;
   overflow: hidden;
-  margin: auto;
+
+  @include breakpoint(sm) {
+    height: 450px;
+  }
+
+  @include breakpoint(md) {
+    height: 600px;
+  }
+
+  @include breakpoint(lg) {
+    height: 700px;
+  }
 
   &__item {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-
     &__slide {
       position: absolute;
       opacity: 0;
@@ -46,11 +55,56 @@
       }
     }
   }
+
+  &__text {
+    opacity: 0;
+
+    &__active {
+      opacity: 1;
+    }
+
+    &__intro {
+      position: absolute;
+      padding: 0.5rem 1rem;
+      background: var(--color-white);
+      top: 40%;
+      letter-spacing: 1px;
+
+      @include breakpoint(sm) {
+        padding: 1rem 1.5rem;
+      }
+
+      @include breakpoint(md) {
+        padding: 2.5rem 2.5rem 3rem 2.5rem;
+      }
+
+      &__title {
+        font-size: 1.3rem;
+
+        @include breakpoint(sm) {
+          font-size: 1.4rem;
+        }
+
+        @include breakpoint(md) {
+          font-size: 1.9rem;
+        }
+      }
+
+      button {
+        display: inline;
+      }
+    }
+  }
 }
 
 .button {
   max-width: 71.25rem;
   margin: auto;
+  margin-top: 1rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
 }
 
 @keyframes revealRight {

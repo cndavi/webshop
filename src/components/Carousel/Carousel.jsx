@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import CarouselButton from '../../elements/CarouselButton'
+import { GrFormPreviousLink } from 'react-icons/gr'
+import { GrFormNextLink } from 'react-icons/gr'
+import { carouselData } from '../../utils/carouselData'
 import styles from './Carousel.module.scss'
-import carouselData from '../../utils/carouselData'
 
 const Carousel = () => {
   const [slideIndex, setSlideIndex] = useState(1)
@@ -26,29 +27,40 @@ const Carousel = () => {
     <>
       <div className={styles.container}>
         <div className={styles.carousel}>
-          {carouselData.map((item, index) => {
+          {carouselData.map((slide, index) => {
             return (
-              <div className={styles.carousel__item} key={item.id}>
+              <div className={styles.carousel__item} key={slide.id}>
                 <div
                   className={
                     slideIndex === index + 1
                       ? `${styles.carousel__item__active} ${styles.carousel__item__slide}`
                       : styles.carousel__item__slide
                   }
-                  key={item.id}
+                  key={slide.id}
                 >
-                  <img
-                    src={process.env.PUBLIC_URL + `/images/img${index + 1}.jpg`}
-                    alt=''
-                  />
+                  <img src={slide.image} alt={slide.title} />
+                </div>
+                <div
+                  className={
+                    slideIndex === index + 1
+                      ? `${styles.carousel__text__active} ${styles.carousel__text}`
+                      : styles.carousel__text
+                  }
+                >
+                  <div className={styles.carousel__text__intro}>
+                    <h4 className={styles.carousel__text__intro__title}>
+                      {slide.title}
+                    </h4>
+                    <p>{slide.subTitle}</p>
+                  </div>
                 </div>
               </div>
             )
           })}
         </div>
         <div className={styles.button}>
-          <CarouselButton moveSlide={nextSlide} direction={'next'} />
-          <CarouselButton moveSlide={previousSlide} direction={'previous'} />
+          <GrFormPreviousLink onClick={previousSlide} />
+          <GrFormNextLink onClick={nextSlide} />
         </div>
       </div>
     </>

@@ -5,37 +5,35 @@ import img3 from '../assets/images/carousel/img3.jpg'
 import img4 from '../assets/images/carousel/img4.jpg'
 import img5 from '../assets/images/carousel/img5.jpg'
 
-const carouselData = [
+export const carouselData = [
   {
     id: uuidv4(),
-    title: 'Lorem ipsum',
+    title: 'Kurt Cobain',
     subTitle: 'Lorem',
     image: img1,
   },
   {
     id: uuidv4(),
-    title: 'Lorem ipsum',
+    title: 'Amy Winehous',
     subTitle: 'Lorem',
     image: img2,
   },
   {
     id: uuidv4(),
-    title: 'Lorem ipsum',
+    title: 'Jim Morrison',
     subTitle: 'Lorem',
     image: img3,
   },
   {
     id: uuidv4(),
-    title: 'Lorem ipsum',
+    title: 'Jimi Hendrix',
     subTitle: 'Lorem',
     image: img4,
   },
   {
     id: uuidv4(),
-    title: 'Lorem ipsum',
+    title: 'David Bowie',
     subTitle: 'Lorem',
     image: img5,
   },
 ]
-
-export default carouselData
