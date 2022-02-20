@@ -11,7 +11,7 @@ const Products = () => {
           <h2>FRONT ROW SOUND</h2>
         </div>
         <img
-          src={require('../../assets/images/heading/img2.jpg')}
+          src={require('../../assets/images/heading/img1.jpg')}
           alt='Records'
         />
       </section>

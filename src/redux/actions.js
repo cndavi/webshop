@@ -19,10 +19,6 @@ export const remove = (id) => ({
   payload: id,
 })
 
-export const clearItems = () => ({
-  type: types.CLEAR_ITEMS,
-})
-
 export const displayItem = (cart) => ({
   type: types.DISPLAY_ITEMS,
   payload: cart,
