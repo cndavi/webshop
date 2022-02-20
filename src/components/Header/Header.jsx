@@ -1,5 +1,6 @@
 import styles from './Header.module.scss'
 import ScrollToButton from '../ScrollToButton'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -10,9 +11,11 @@ const Header = () => {
         </video>
 
         <div className={styles.header__banner__title}>
-          <h1 className={styles.header__banner__title__main}>
-            home is where a <span>Vinyl Box</span> is
-          </h1>
+          <h1>home is where a Vinyl Box is</h1>
+          <h4>check out our new collection</h4>
+          <Link to='/products'>
+            <button>DISCOVER MORE</button>
+          </Link>
         </div>
 
         <div className='seperator'>

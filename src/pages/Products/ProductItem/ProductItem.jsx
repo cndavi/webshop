@@ -25,9 +25,6 @@ const ProductItem = ({ item }) => {
         </div>
 
         <div className={styles.productItem__buttons}>
-          <Link to={`/products/${item.id}`}>
-            <button>More Info</button>
-          </Link>
           <button onClick={() => dispatch(increase(item.id))}>
             Add to Cart
           </button>

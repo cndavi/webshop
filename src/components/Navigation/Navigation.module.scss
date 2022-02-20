@@ -5,9 +5,9 @@
   width: 100%;
   top: 0;
   z-index: 1000;
-  background: var(--color-black);
+  background: transparent;
   transition: 0.3s ease all;
-  position: sticky;
+  position: fixed;
   top: 0;
   padding: 0 1.5rem;
 
@@ -23,6 +23,10 @@
     padding: 0 12rem;
   }
 
+  &__active {
+    background: var(--color-black);
+  }
+
   &__content {
     margin: 0 auto;
     display: flex;
@@ -33,23 +37,27 @@
     max-width: 71.25rem;
 
     @include breakpoint(lg) {
-      max-width: 100rem;
+      max-width: 150rem;
+      padding: 2rem 0;
     }
 
     &__logo {
-      width: 10rem;
+      width: 14rem;
       margin-right: auto;
       text-decoration: none;
       color: var(--color-light);
       transition: 0.3s ease all;
       font-size: 1.175rem;
-      font-weight: bold;
       font-family: var(--font-secondary);
       font-style: italic;
       letter-spacing: 1px;
 
       @include breakpoint(sm) {
-        font-size: 1.575rem;
+        font-size: 1.775rem;
+      }
+
+      @include breakpoint(lg) {
+        font-size: 2.575rem;
       }
     }
 
@@ -69,11 +77,13 @@
       backdrop-filter: blur(3px);
       transform: translate(0);
       transition: 0.3s ease transform;
-      letter-spacing: 1.5px;
+      letter-spacing: 1px;
       font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: 600;
 
       @include breakpoint(sm) {
-        font-size: 1.1rem;
+        font-size: 1.275rem;
       }
 
       @include breakpoint(md) {
@@ -107,13 +117,35 @@
             }
           }
 
+          @include breakpoint(md) {
+            padding: 0.75rem 1.25rem;
+          }
+
           a {
             text-decoration: none;
             color: inherit;
             transition: 0.3s ease all;
+            text-decoration: none;
+            opacity: 1;
+            transition: opacity 0.4s ease;
+            position: relative;
 
-            @include breakpoint(md) {
-              padding: 0.75rem 1.25rem;
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: -3px;
+              left: 0;
+              width: 100%;
+              height: 3px;
+              background-color: var(--color-white);
+              opacity: 0;
+              transition: opacity 0.4s ease;
+            }
+            &:hover {
+              opacity: 0.7;
+              &::after {
+                opacity: 0.7;
+              }
             }
           }
         }
@@ -141,6 +173,7 @@
       position: relative;
       z-index: 301;
       padding: 0.75rem 1rem;
+
       @include breakpoint(sm) {
         font-size: 1.7rem;
       }

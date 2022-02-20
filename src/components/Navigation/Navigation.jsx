@@ -9,9 +9,10 @@ import Badge from '@mui/material/Badge'
 import Cart from '../../pages/Cart'
 import styles from './Navigation.module.scss'
 
-const Header = () => {
+const Navigation = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [showCart, setShowCart] = useState(false)
+  const [navbar, setNavbar] = useState(false)
 
   if (showCart === true) {
     document.body.style.overflow = 'hidden'
@@ -52,15 +53,31 @@ const Header = () => {
     setShowCart((prev) => !prev)
   }
 
+  const changeBackgroundNavbar = () => {
+    if (window.scrollY >= 20) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
+
+  window.addEventListener('scroll', changeBackgroundNavbar)
+
   return (
     <>
-      <div className={styles.navbar}>
+      <nav
+        className={
+          navbar
+            ? `${styles.navbar} ${styles.navbar__active}`
+            : `${styles.navbar}`
+        }
+      >
         <div className={styles.navbar__content}>
           <Link to='/' className={styles.navbar__content__logo}>
             <h3>Vinyl Box</h3>
           </Link>
 
-          <nav
+          <div
             className={`${styles.navbar__content__links} ${
               showMenu ? styles.isMenu : ''
             }`}
@@ -82,7 +99,7 @@ const Header = () => {
                 </Link>
               </li>
             </ul>
-          </nav>
+          </div>
 
           <div className={styles.navbar__content__cart}>
             <Link to='#'>
@@ -111,9 +128,9 @@ const Header = () => {
             )}
           </div>
         </div>
-      </div>
+      </nav>
     </>
   )
 }
 
-export default Header
+export default Navigation

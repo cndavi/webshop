@@ -53,14 +53,5 @@
 
   &__breadcrumb {
     padding: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &__button {
-      padding: 0.4rem 2.2rem;
-      letter-spacing: 0.5px;
-      @include button();
-    }
   }
 }

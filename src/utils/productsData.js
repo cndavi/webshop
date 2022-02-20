@@ -41,7 +41,7 @@ export const productsData = [
   {
     id: uuidv4(),
     title: 'Ringo Starr',
-    price: 50,
+    price: 2050,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     image: record4,
@@ -50,7 +50,7 @@ export const productsData = [
   {
     id: uuidv4(),
     title: 'Janis Joplin',
-    price: 45,
+    price: 1945,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     image: record5,
@@ -59,7 +59,7 @@ export const productsData = [
   {
     id: uuidv4(),
     title: 'Elvis Presley',
-    price: 40,
+    price: 2140,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     image: record6,

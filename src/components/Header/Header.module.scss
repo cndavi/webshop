@@ -10,6 +10,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 
     &__video {
@@ -25,46 +27,73 @@
 
     &__title {
       position: absolute;
-      top: 30%;
+      top: 35%;
       z-index: 1;
       width: 100%;
-      height: 15%;
-      color: var(--color-light);
-      display: flex;
       justify-content: center;
       align-items: center;
+      display: block;
+      color: var(--color-light);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+
       @include breakpoint(sm) {
-        width: 75%;
-        height: 20%;
+        width: 45%;
       }
 
-      &__main {
-        font-size: 1.5rem;
-        font-weight: 500;
-        @include breakpoint(sm) {
-          font-size: 1.7rem;
-        }
+      @include breakpoint(lg) {
+        top: 40%;
+      }
+
+      h1 {
+        line-height: 1.05;
+        font-style: normal;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        font-size: 1.275rem;
+
         @include breakpoint(md) {
-          font-size: 1.5rem;
-        }
-        @include breakpoint(lg) {
-          font-size: 1.8rem;
+          font-size: 1.575rem;
+          margin-bottom: 1.5rem;
         }
 
-        span {
-          font-size: 1.7rem;
-          font-weight: 500;
-          font-family: var(--font-secondary);
-          font-style: italic;
-          @include breakpoint(sm) {
-            font-size: 1.9rem;
-          }
-          @include breakpoint(md) {
-            font-size: 1.8rem;
-          }
-          @include breakpoint(lg) {
-            font-size: 2rem;
-          }
+        @include breakpoint(lg) {
+          font-size: 2.575rem;
+        }
+      }
+
+      h4 {
+        font-size: 1.05rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+
+        @include breakpoint(md) {
+          font-size: 1.175rem;
+          margin-bottom: 1.5rem;
+        }
+
+        @include breakpoint(lg) {
+          font-size: 1.275rem;
+        }
+      }
+
+      button {
+        padding: 0.3rem 1.75rem;
+        font-size: 1rem;
+        cursor: pointer;
+        font-family: inherit;
+        letter-spacing: 1.5px;
+        border: none;
+        background: var(--color-light);
+
+        @include breakpoint(md) {
+          padding: 1rem 2.35rem;
+          font-size: 1.175rem;
+        }
+
+        @include breakpoint(lg) {
+          padding: 1.3rem 2.75rem;
+          font-size: 1.275rem;
         }
       }
     }

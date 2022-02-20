@@ -1,16 +1,20 @@
 import styles from './Products.module.scss'
-import Carousel from '../../components/Carousel'
 import ProductItem from './ProductItem'
 import Footer from '../../components/Footer'
-import { carouselData } from '../../utils/carouselData'
 import { productsData } from '../../utils/productsData'
 
 const Products = () => {
   return (
     <>
-      <div className={styles.carousel}>
-        <Carousel slides={carouselData} />
-      </div>
+      <section className={styles.header}>
+        <div className={styles.header__text}>
+          <h2>FRONT ROW SOUND</h2>
+        </div>
+        <img
+          src={require('../../assets/images/heading/img2.jpg')}
+          alt='Records'
+        />
+      </section>
 
       <section className={styles.products}>
         <div className={styles.products__container}>

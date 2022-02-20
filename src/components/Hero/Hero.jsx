@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import styles from './Hero.module.scss'
 import Gallery from '../Gallery'
 
@@ -59,11 +58,7 @@ const Hero = () => (
         </div>
       </div>
     </div>
-    <div className={styles.hero__breadcrumb}>
-      <Link to='products'>
-        <button className={styles.hero__breadcrumb__button}>View More</button>
-      </Link>
-    </div>
+    <div className={styles.hero__breadcrumb}></div>
   </>
 )
 

@@ -26,6 +26,7 @@ const Carousel = () => {
   return (
     <>
       <div className={styles.container}>
+        <h2>FEEL THE GROOVE</h2>
         <div className={styles.carousel}>
           {carouselData.map((slide, index) => {
             return (

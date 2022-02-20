@@ -13,12 +13,6 @@ const ProductDescription = () => {
 
   return (
     <>
-      <div className={styles.header}>
-        <img
-          src={require('../../../assets/images/heading/img2.jpg')}
-          alt='Records'
-        />
-      </div>
       <div className={styles.productDetail}>
         <div className={styles.productDetail__container}>
           <div className={styles.productDetail__container__item}>
