@@ -14,11 +14,13 @@ const Navigation = () => {
   const [showCart, setShowCart] = useState(false)
   const [navbar, setNavbar] = useState(false)
 
-  if (showCart === true) {
-    document.body.style.overflow = 'hidden'
-  } else {
-    document.body.style.overflow = 'unset'
-  }
+  useEffect(() => {
+    if (showCart === true) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+  }, [showCart])
 
   const { totalCount } = useSelector((state) => state.cart)
 

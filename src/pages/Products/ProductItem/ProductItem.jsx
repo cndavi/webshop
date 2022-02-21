@@ -8,12 +8,6 @@ const ProductItem = ({ item }) => {
   const [showModal, setShowModal] = useState(false)
   const dispatch = useDispatch()
 
-  if (showModal === true) {
-    document.body.style.overflow = 'hidden'
-  } else {
-    document.body.style.overflow = 'unset'
-  }
-
   const openModal = () => {
     setShowModal((prev) => !prev)
   }
@@ -22,9 +16,11 @@ const ProductItem = ({ item }) => {
     <>
       <div className={styles.productItem}>
         <div className={styles.productItem__container}>
-          <img src={item.image} alt={item.title} />
-          <div className={styles.productItem__container__btn}>
-            <button onClick={openModal}>View More</button>
+          <div className={styles.productItem__container__image}>
+            <img src={item.image} alt={item.title} />
+            <div className={styles.productItem__container__image__overlay}>
+              <button onClick={openModal}>View More</button>
+            </div>
             <Modal
               showModal={showModal}
               item={item}
