@@ -46,7 +46,7 @@ const Modal = ({ showModal, setShowModal, item }) => {
             </div>
 
             <div className={styles.modal__wrapper__details}>
-              <h3>{item.title}</h3>
+              <h2>{item.title}</h2>
               <h3>€{item.price}</h3>
               <p>{item.description}</p>
               <button onClick={() => dispatch(increase(item.id))}>

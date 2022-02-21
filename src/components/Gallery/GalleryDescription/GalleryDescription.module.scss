@@ -5,7 +5,7 @@
   font-size: 0.7rem;
   color: var(--color-dark);
   @include breakpoint(lg) {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   &__title {

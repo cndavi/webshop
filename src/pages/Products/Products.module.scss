@@ -1,43 +1,58 @@
 @import './../../styles//mixins.scss';
 @import './../../styles//variables.scss';
+
 .header {
   @include header();
   position: relative;
-
   &__text {
-    top: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 12%;
-    right: auto;
     position: absolute;
+    top: 50%;
+    left: 27%;
+    overflow: hidden;
     color: var(--color-white);
     font-size: 1.257rem;
-    letter-spacing: 0.05rem;
-
+    letter-spacing: 1.5px;
     @include breakpoint(lg) {
       font-size: 2.157rem;
+    }
+
+    h1 {
+      line-height: 1.05;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.275rem;
+      @include breakpoint(md) {
+        font-size: 1.575rem;
+        margin-bottom: 0.5rem;
+      }
+      @include breakpoint(lg) {
+        font-size: 2.075rem;
+      }
+    }
+
+    h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      @include breakpoint(md) {
+        font-size: 1.175rem;
+        margin-bottom: 1.5rem;
+      }
+      @include breakpoint(lg) {
+        font-size: 1.275rem;
+      }
     }
   }
 }
 
-.carousel {
-  margin: 5rem auto;
-  width: 100%;
-}
-
 .products {
-  padding: 0 3rem;
+  padding: 0 1rem;
   margin: 5rem 0;
-
   @include breakpoint(sm) {
     padding: 0 3rem;
   }
-
   @include breakpoint(md) {
     padding: 0 5rem;
   }
-
   @include breakpoint(lg) {
     padding: 0 12rem;
   }
@@ -50,13 +65,11 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     grid-gap: 1rem;
-
     @include breakpoint(sm) {
       grid-gap: 2rem;
     }
-
     @include breakpoint(lg) {
-      max-width: 100rem;
+      max-width: 90rem;
     }
   }
 }

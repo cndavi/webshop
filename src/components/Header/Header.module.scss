@@ -17,7 +17,6 @@
     &__video {
       height: 400px;
       align-self: center;
-
       @include breakpoint(md) {
         width: 100%;
         height: auto;
@@ -35,12 +34,10 @@
       display: block;
       color: var(--color-light);
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-
+      letter-spacing: 2px;
       @include breakpoint(sm) {
         width: 45%;
       }
-
       @include breakpoint(lg) {
         top: 40%;
       }
@@ -51,14 +48,12 @@
         font-weight: 700;
         margin-bottom: 0.5rem;
         font-size: 1.275rem;
-
         @include breakpoint(md) {
           font-size: 1.575rem;
           margin-bottom: 1.5rem;
         }
-
         @include breakpoint(lg) {
-          font-size: 2.575rem;
+          font-size: 2.075rem;
         }
       }
 
@@ -66,12 +61,10 @@
         font-size: 1.05rem;
         font-weight: 600;
         margin-bottom: 0.5rem;
-
         @include breakpoint(md) {
           font-size: 1.175rem;
           margin-bottom: 1.5rem;
         }
-
         @include breakpoint(lg) {
           font-size: 1.275rem;
         }
@@ -85,15 +78,13 @@
         letter-spacing: 1.5px;
         border: none;
         background: var(--color-light);
-
         @include breakpoint(md) {
           padding: 1rem 2.35rem;
           font-size: 1.175rem;
         }
-
         @include breakpoint(lg) {
-          padding: 1.3rem 2.75rem;
-          font-size: 1.275rem;
+          padding: 1.2rem 2.75rem;
+          font-size: 1.175rem;
         }
       }
     }

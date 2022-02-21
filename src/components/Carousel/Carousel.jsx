@@ -3,7 +3,6 @@ import { GrFormPreviousLink } from 'react-icons/gr'
 import { GrFormNextLink } from 'react-icons/gr'
 import { carouselData } from '../../utils/carouselData'
 import styles from './Carousel.module.scss'
-
 const Carousel = () => {
   const [slideIndex, setSlideIndex] = useState(1)
 

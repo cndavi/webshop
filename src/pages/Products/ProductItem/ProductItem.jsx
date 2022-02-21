@@ -19,7 +19,7 @@ const ProductItem = ({ item }) => {
           <div className={styles.productItem__container__image}>
             <img src={item.image} alt={item.title} />
             <div className={styles.productItem__container__image__overlay}>
-              <button onClick={openModal}>View More</button>
+              <button onClick={openModal}>More Information</button>
             </div>
             <Modal
               showModal={showModal}
@@ -33,12 +33,6 @@ const ProductItem = ({ item }) => {
             <h3>{item.title}</h3>
             <p>€{item.price}</p>
           </div>
-        </div>
-
-        <div className={styles.productItem__buttons}>
-          <button onClick={() => dispatch(increase(item.id))}>
-            Add to Cart
-          </button>
         </div>
       </div>
     </>

@@ -9,9 +9,10 @@ const Home = () => {
     <>
       <Header />
       <Hero />
-      <div className={styles.carousel}>
+      <section className={styles.carousel}>
         <Carousel />
-      </div>
+      </section>
+
       <Footer />
     </>
   )

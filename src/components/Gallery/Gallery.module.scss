@@ -15,6 +15,9 @@
       @include breakpoint(sm) {
         padding: 2rem;
       }
+      @include breakpoint(lg) {
+        padding: 2rem 4rem;
+      }
     }
   }
 }

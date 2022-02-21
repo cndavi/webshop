@@ -30,7 +30,6 @@
       0% {
         top: -100%;
       }
-
       100% {
         top: 0px;
       }
@@ -43,7 +42,6 @@
     &__details {
       background: var(--color-light);
       color: var(--color-black);
-
       @include breakpoint(md) {
         width: 50vw;
         height: 100vh;
@@ -68,15 +66,16 @@
           font-weight: 400;
           text-transform: none;
           letter-spacing: 0.05rem;
-          font-size: 1.4rem;
+          font-size: 1.275rem;
           line-height: 1.21429;
           letter-spacing: 0.05rem;
           text-transform: uppercase;
-          margin: 0 3rem;
-
-          @include breakpoint(md) {
+          margin: 0 1.5rem;
+          @include breakpoint(sm) {
             line-height: 1.1;
             letter-spacing: 0.1rem;
+            font-size: 1.4rem;
+            margin: 0 3rem;
           }
         }
       }
@@ -110,15 +109,14 @@
           font-weight: 300;
           text-transform: none;
           letter-spacing: 0.05rem;
-          line-height: 1.08333;
           letter-spacing: 0.05rem;
           margin-bottom: 1rem;
-          font-size: 1.4rem;
-
+          font-size: 1.2rem;
           &:nth-child(3) {
-            @include breakpoint(sm) {
-              margin-top: 6rem;
-            }
+            margin-top: 4rem;
+          }
+          @include breakpoint(md) {
+            font-size: 1.4rem;
           }
         }
 
@@ -144,7 +142,6 @@
       padding: 0;
       z-index: 10;
       color: var(--color-dark);
-
       @include breakpoint(md) {
         color: var(--color-light);
       }

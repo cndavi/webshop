@@ -19,18 +19,17 @@
     padding: 4rem;
     background: var(--color-white);
     color: var(--color-black);
-    display: flex;
     position: relative;
-    align-items: center;
+    display: flex;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
     display: grid;
     grid-template-rows: 1fr 1fr;
     animation-name: slideDown;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
     width: 400px;
-    height: 700px;
+    height: 800px;
 
     @keyframes slideDown {
       0% {
@@ -49,7 +48,7 @@
 
     @include breakpoint(md) {
       width: 1000px;
-      height: 700px;
+      height: 750px;
       grid-template-columns: 1fr 1fr;
     }
 
@@ -66,9 +65,69 @@
       img {
         max-height: 100%;
         box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-
+        @include breakpoint(sm) {
+          max-height: 45vh;
+        }
         @include breakpoint(lg) {
           max-height: 50vh;
+        }
+      }
+    }
+
+    &__details {
+      text-align: center;
+      letter-spacing: 1.5px;
+      line-height: 1.6;
+      h2 {
+        font-size: 1.875rem;
+        font-weight: 600;
+        padding-top: 1rem;
+        @include breakpoint(md) {
+          padding: 0;
+        }
+        @include breakpoint(lg) {
+          font-size: 2.757rem;
+          line-height: 1.5;
+        }
+      }
+
+      h3 {
+        font-size: 1.657rem;
+        font-weight: 300;
+        padding-bottom: 0.5rem;
+        @include breakpoint(md) {
+          padding: 0;
+        }
+        @include breakpoint(lg) {
+          font-size: 2.157rem;
+          line-height: 1.5;
+        }
+      }
+
+      p {
+        padding: 0.5rem 0 2rem 0;
+      }
+
+      button {
+        font-family: inherit;
+        padding: 0.6rem 1.1rem;
+        font-size: 0.857rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        cursor: pointer;
+        border: 2px solid var(--color-primary);
+        background: transparent;
+        transition: all 600ms ease;
+        color: var(--color-primary);
+        &:hover {
+          border: 2px solid var(--color-black);
+          color: var(--color-black);
+        }
+
+        @include breakpoint(md) {
+          padding: 0.8rem 1.8rem;
+          font-size: 1.057rem;
         }
       }
     }

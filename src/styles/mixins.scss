@@ -27,6 +27,9 @@
   @include breakpoint(sm) {
     font-size: 1.7rem;
   }
+  @include breakpoint(lg) {
+    font-size: 1.675rem;
+  }
 }
 
 @mixin hover() {
