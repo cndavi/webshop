@@ -8,9 +8,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <div className={styles.hero}>
-        <Hero />
-      </div>
+      <Hero />
       <div className={styles.carousel}>
         <Carousel />
       </div>

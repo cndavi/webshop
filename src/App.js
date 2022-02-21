@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import Home from './pages/Home'
 import Products from './pages/Products'
-import ProductDescription from './pages/Products/ProductDescription'
 import Contact from './pages/Contact'
 import NotFoundPage from './components/NotFoundPage'
 import Account from './pages/Account'
@@ -16,7 +15,6 @@ const App = () => {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/products' element={<Products />} />
-          <Route exact path='/products/:id' element={<ProductDescription />} />
           <Route exact path='/contact' element={<Contact />} />
           <Route exact path='/account' element={<Account />} />
           <Route path='*' element={<NotFoundPage />} />

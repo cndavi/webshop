@@ -66,7 +66,7 @@ const Cart = ({ showCart, setShowCart }) => {
                   className={styles.cart__wrapper__details__title__divider}
                 ></span>
                 <h2 className={styles.cart__wrapper__details__title__text}>
-                  Your Summary
+                  Summary
                 </h2>
                 <span
                   className={styles.cart__wrapper__details__title__divider}

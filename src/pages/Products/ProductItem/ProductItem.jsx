@@ -1,21 +1,36 @@
-import { Link } from 'react-router-dom'
 import { increase } from '../../../redux/actions'
 import { useDispatch } from 'react-redux'
+import { useState } from 'react'
+import Modal from '../../../components/Modal'
 import styles from './ProductItem.module.scss'
 
 const ProductItem = ({ item }) => {
+  const [showModal, setShowModal] = useState(false)
   const dispatch = useDispatch()
+
+  if (showModal === true) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'unset'
+  }
+
+  const openModal = () => {
+    setShowModal((prev) => !prev)
+  }
+
   return (
     <>
       <div className={styles.productItem}>
-        <div className={styles.productItem__image}>
-          <Link to={`/products/${item.id}`}>
-            <img
-              src={item.image}
-              alt={item.title}
-              className={styles.productItem__hide}
+        <div className={styles.productItem__container}>
+          <img src={item.image} alt={item.title} />
+          <div className={styles.productItem__container__btn}>
+            <button onClick={openModal}>View More</button>
+            <Modal
+              showModal={showModal}
+              item={item}
+              setShowModal={setShowModal}
             />
-          </Link>
+          </div>
         </div>
         <div className={styles.productItem__description}>
           <div className={styles.productItem__description__main}>

@@ -11,14 +11,13 @@
     grid-column-start: span 4;
   }
 
-  &__image {
+  &__container {
     -o-object-fit: cover;
     overflow: hidden;
     object-fit: cover;
 
     img {
       @include image();
-      @include hover();
     }
   }
 
