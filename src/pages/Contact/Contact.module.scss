@@ -1,0 +1,12 @@
+@import './../../styles//mixins.scss';
+@import './../../styles//variables.scss';
+
+.header {
+  @include productHeader();
+}
+
+.contact {
+  img {
+    height: 400px;
+  }
+}
