@@ -18,10 +18,8 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className='seperator'>
-          <div className={styles.header__banner__seperator}>
-            <ScrollToButton />
-          </div>
+        <div className={styles.header__banner__seperator}>
+          <ScrollToButton />
         </div>
 
         <div className={styles.header__banner__breadcrumb}></div>

@@ -45,23 +45,16 @@
   vertical-align: middle;
 }
 
-@mixin header() {
+@mixin productHeader() {
+  position: relative;
   display: flex;
-  justify-content: center;
   overflow: hidden;
   img {
     height: 400px;
     align-self: center;
-
     @include breakpoint(md) {
       width: 100%;
       height: auto;
-      align-self: center;
-    }
-
-    @include breakpoint(lg) {
-      height: 100vh;
-      width: auto;
       align-self: center;
     }
   }

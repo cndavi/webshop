@@ -9,10 +9,9 @@ const Home = () => {
     <>
       <Header />
       <Hero />
-      <section className={styles.carousel}>
+      <section className='carousel'>
         <Carousel />
       </section>
-
       <Footer />
     </>
   )

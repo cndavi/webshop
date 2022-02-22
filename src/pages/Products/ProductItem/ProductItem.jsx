@@ -1,12 +1,9 @@
-import { increase } from '../../../redux/actions'
-import { useDispatch } from 'react-redux'
 import { useState } from 'react'
 import Modal from '../../../components/Modal'
 import styles from './ProductItem.module.scss'
 
 const ProductItem = ({ item }) => {
   const [showModal, setShowModal] = useState(false)
-  const dispatch = useDispatch()
 
   const openModal = () => {
     setShowModal((prev) => !prev)
@@ -19,7 +16,7 @@ const ProductItem = ({ item }) => {
           <div className={styles.productItem__container__image}>
             <img src={item.image} alt={item.title} />
             <div className={styles.productItem__container__image__overlay}>
-              <button onClick={openModal}>More Information</button>
+              <button onClick={openModal}>View More</button>
             </div>
             <Modal
               showModal={showModal}

@@ -1,7 +1,7 @@
 import { scroller } from 'react-scroll'
 
 const handleScroll = () => {
-  scroller.scrollTo('seperator', {
+  scroller.scrollTo('carousel', {
     duration: 900,
     delay: 0,
     smooth: 'ease',

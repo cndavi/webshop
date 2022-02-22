@@ -7,7 +7,6 @@
   overflow: hidden;
   grid-column-start: span 6;
   padding: 0 1rem;
-
   @include breakpoint(sm) {
     grid-column-start: span 3;
     padding: 0;
@@ -53,7 +52,7 @@
           background: var(--color-white);
           border: none;
           @include breakpoint(md) {
-            padding: 1.1rem 2.8rem;
+            padding: 1rem 2.5rem;
             font-size: 1.055rem;
           }
         }

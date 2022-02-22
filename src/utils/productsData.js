@@ -7,6 +7,9 @@ import record6 from '../assets/images/recordPlayers/img6.jpg'
 import record7 from '../assets/images/recordPlayers/img7.jpg'
 import record8 from '../assets/images/recordPlayers/img8.jpg'
 import record9 from '../assets/images/recordPlayers/img9.jpg'
+import record10 from '../assets/images/recordPlayers/img10.jpg'
+import record11 from '../assets/images/recordPlayers/img11.jpg'
+import record12 from '../assets/images/recordPlayers/img12.jpg'
 
 import { v4 as uuidv4 } from 'uuid'
 
@@ -49,11 +52,57 @@ export const productsData = [
   },
   {
     id: uuidv4(),
+    title: 'Ringo Starr',
+    price: 2050,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    image: record5,
+    amount: 0,
+  },
+  {
+    id: uuidv4(),
+    title: 'The Act',
+    price: 50,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    image: record6,
+    amount: 0,
+  },
+  {
+    id: uuidv4(),
+    title: 'Ringo Starr',
+    price: 2050,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    image: record7,
+    amount: 0,
+  },
+  {
+    id: uuidv4(),
+    title: 'The Strokes',
+    price: 45,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    image: record8,
+    amount: 0,
+  },
+
+  {
+    id: uuidv4(),
+    title: 'Cherie Currie',
+    price: 1750,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    image: record9,
+    amount: 0,
+  },
+  {
+    id: uuidv4(),
     title: 'Janis Joplin',
     price: 1945,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: record5,
+    image: record10,
     amount: 0,
   },
   {
@@ -62,7 +111,7 @@ export const productsData = [
     price: 2140,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: record6,
+    image: record11,
     amount: 0,
   },
   {
@@ -71,25 +120,7 @@ export const productsData = [
     price: 2400,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: record7,
-    amount: 0,
-  },
-  {
-    id: uuidv4(),
-    title: 'David Bowie',
-    price: 2750,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: record8,
-    amount: 0,
-  },
-  {
-    id: uuidv4(),
-    title: 'Cherie Currie',
-    price: 1750,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: record9,
+    image: record12,
     amount: 0,
   },
 ]
