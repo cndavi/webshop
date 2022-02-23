@@ -42,6 +42,7 @@
     &__details {
       background: var(--color-light);
       color: var(--color-black);
+      overflow-x: scroll;
       @include breakpoint(md) {
         width: 50vw;
         height: 100vh;
@@ -108,8 +109,7 @@
           font-style: normal;
           font-weight: 300;
           text-transform: none;
-          letter-spacing: 0.05rem;
-          letter-spacing: 0.05rem;
+          letter-spacing: 1.5px;
           margin-bottom: 1rem;
           font-size: 1.2rem;
           &:nth-child(3) {
@@ -124,10 +124,15 @@
           width: 100%;
           border: none;
           padding: 0.5rem 0;
-          font-size: 1.4rem;
+          font-size: 1.1rem;
+          letter-spacing: 1.5px;
           text-transform: uppercase;
           font-family: inherit;
           cursor: pointer;
+          background: var(--color-white);
+          @include breakpoint(sm) {
+            font-size: 1.4rem;
+          }
         }
       }
     }

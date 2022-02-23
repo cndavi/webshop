@@ -3,16 +3,22 @@
 
 .galleryDescription {
   font-size: 0.7rem;
+  letter-spacing: 1.5px;
   color: var(--color-dark);
-  @include breakpoint(lg) {
-    font-size: 1rem;
-  }
 
   &__title {
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 1.1rem;
+    @include breakpoint(lg) {
+      font-size: 1.375rem;
+    }
   }
 
   &__category {
     font-weight: 400;
+    font-size: 0.7rem;
+    @include breakpoint(lg) {
+      font-size: 1rem;
+    }
   }
 }

@@ -7,21 +7,25 @@
   @include breakpoint(sm) {
     padding: 3rem;
   }
+
+  h2 {
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    font-size: 1.157rem;
+  }
 }
 
 .carousel {
   height: 270px;
   position: relative;
   overflow: hidden;
-
   @include breakpoint(sm) {
     height: 450px;
   }
-
   @include breakpoint(md) {
     height: 600px;
   }
-
   @include breakpoint(lg) {
     height: 690px;
   }
@@ -38,7 +42,6 @@
 
     &__active {
       opacity: 1;
-
       &::before {
         position: absolute;
         content: '';
@@ -64,28 +67,25 @@
 
     &__intro {
       position: absolute;
-      padding: 0.5rem 1rem;
+      padding: 1rem 1rem;
       background: var(--color-white);
       top: 40%;
-      letter-spacing: 1px;
-
+      letter-spacing: 1.5px;
       @include breakpoint(sm) {
         padding: 1rem 1.5rem;
       }
-
       @include breakpoint(md) {
         padding: 2.5rem 2.5rem 3rem 2.5rem;
       }
 
       &__title {
-        font-size: 1.3rem;
-
+        font-size: 1.1rem;
+        font-weight: 600;
         @include breakpoint(sm) {
           font-size: 1.4rem;
         }
-
         @include breakpoint(md) {
-          font-size: 1.9rem;
+          font-size: 1.575rem;
         }
       }
 

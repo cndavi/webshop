@@ -8,8 +8,8 @@ const Products = () => {
     <>
       <section className={styles.header}>
         <div className={styles.header__text}>
-          <h1>FRONT ROW SOUND</h1>
-          <h4>MUSIC FOR HEALING</h4>
+          <h1>front row music</h1>
+          <h4>music for healing</h4>
         </div>
         <img
           src={require('../../assets/images/heading/img1.jpg')}

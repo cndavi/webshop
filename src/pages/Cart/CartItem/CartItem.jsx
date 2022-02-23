@@ -13,22 +13,37 @@ const CartItem = ({ id, image, title, price, amount }) => {
   }
   return (
     <div className={styles.cartItem}>
-      <div className={styles.cartItem__description}>
-        <img src={image} alt={title} style={{ width: '5rem' }} />
-        <div className={styles.cartItem__description__info}>
-          <h5>{title}</h5>
-          <h5>€{price}</h5>
+      <div className={styles.cartItem__item}>
+        <div className={styles.cartItem__item__image}>
+          <img src={image} alt={title} />
         </div>
-      </div>
-
-      <div className={styles.cartItem__icons}>
-        <BiMinus onClick={() => dispatch(decrease(id))} />
-        <p>{amount}</p>
-        <BiPlus onClick={() => dispatch(increase(id))} />
-        <BiTrashAlt
-          onClick={() => dispatch(remove(id))}
-          style={{ marginLeft: '1rem' }}
-        />
+        <div className={styles.cartItem__item__details}>
+          <div className={styles.cartItem__item__details__name}>{title}</div>
+          <div className={styles.cartItem__item__details__price}>€{price}</div>
+        </div>
+        <div className={styles.cartItem__item__buttons}>
+          <div className={styles.cartItem__item__buttons__controls}>
+            <div className={styles.cartItem__item__buttons__controls__quantity}>
+              <BiMinus
+                onClick={() => dispatch(decrease(id))}
+                className={
+                  styles.cartItem__item__buttons__controls__quantity__icon
+                }
+              />
+              <input type='number' value={amount} readOnly />
+              <BiPlus
+                onClick={() => dispatch(increase(id))}
+                className={
+                  styles.cartItem__item__buttons__controls__quantity__icon
+                }
+              />
+            </div>
+            <div className={styles.cartItem__item__buttons__controls__remove}>
+              <BiTrashAlt onClick={() => dispatch(remove(id))} />
+            </div>
+          </div>
+        </div>
+        <hr />
       </div>
     </div>
   )

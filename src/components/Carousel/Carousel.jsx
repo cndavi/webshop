@@ -48,10 +48,10 @@ const Carousel = () => {
                   }
                 >
                   <div className={styles.carousel__text__intro}>
-                    <h4 className={styles.carousel__text__intro__title}>
+                    <div className={styles.carousel__text__intro__title}>
                       {slide.title}
-                    </h4>
-                    <p>{slide.subTitle}</p>
+                    </div>
+                    <div>{slide.subTitle}</div>
                   </div>
                 </div>
               </div>
