@@ -53,7 +53,6 @@ const Modal = ({ showModal, setShowModal, item }) => {
                 Add to Cart
               </button>
             </div>
-
             <div className={styles.modal__wrapper__close}>
               <AiOutlineClose onClick={() => setShowModal((prev) => !prev)} />
             </div>

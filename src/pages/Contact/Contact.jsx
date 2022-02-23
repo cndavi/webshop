@@ -6,7 +6,7 @@ const Contact = () => {
       <div className={styles.contact}>
         <div className={styles.contact__image}>
           <img
-            src={require('../../assets/images/heading/img2.jpg')}
+            src={require('../../assets/images/heading/img3.jpg')}
             alt='Records'
           />
         </div>

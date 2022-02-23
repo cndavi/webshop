@@ -28,7 +28,7 @@
     animation-name: slideDown;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
-    width: 25rem;
+    width: 22rem;
     height: 52rem;
 
     @keyframes slideDown {
@@ -70,11 +70,12 @@
       margin-left: 1rem;
 
       h2 {
-        font-size: 1.875rem;
+        font-size: 1.475rem;
         font-weight: 600;
         padding-top: 1rem;
-        @include breakpoint(md) {
+        @include breakpoint(sm) {
           padding: 0;
+          font-size: 1.875rem;
         }
         @include breakpoint(lg) {
           font-size: 2.757rem;
@@ -83,11 +84,12 @@
       }
 
       h3 {
-        font-size: 1.657rem;
+        font-size: 1.257rem;
         font-weight: 300;
         padding-bottom: 0.5rem;
-        @include breakpoint(md) {
+        @include breakpoint(sm) {
           padding: 0;
+          font-size: 1.657rem;
         }
         @include breakpoint(lg) {
           font-size: 2.157rem;

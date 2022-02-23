@@ -63,7 +63,10 @@ const Navigation = () => {
     }
   }
 
-  window.addEventListener('scroll', changeBackgroundNavbar)
+  useEffect(() => {
+    window.addEventListener('scroll', changeBackgroundNavbar)
+    return () => window.removeEventListener('scroll', changeBackgroundNavbar)
+  }, [])
 
   return (
     <>

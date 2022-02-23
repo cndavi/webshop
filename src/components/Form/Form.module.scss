@@ -1,3 +1,6 @@
+@import './../../styles//mixins.scss';
+@import './../../styles//variables.scss';
+
 .form {
   display: flex;
   flex-direction: column;
@@ -8,38 +11,23 @@
 
     &__space {
       display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
+      @include breakpoint(sm) {
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+      }
 
       &__item {
         line-height: 1.14286;
         letter-spacing: 1px;
         text-transform: uppercase;
 
-        &__label {
-          &:before {
-            content: '';
-            background-color: transparent;
-            border: 1px solid var(--color-black);
-            display: inline-block;
-            width: 1.5rem;
-            height: 1.5rem;
-            line-height: 2rem;
-            text-align: center;
-            vertical-align: middle;
-            box-sizing: border-box;
-            transition: background-color 0.2s ease;
-            position: absolute;
-            top: 0;
-            left: 0;
+        &:nth-child(1) {
+          padding-bottom: 1.5rem;
+          @include breakpoint(sm) {
+            padding-bottom: 0;
           }
-        }
-
-        &__checkbox {
-          color: var(--color-black);
-          padding-top: 0.2rem;
-          padding-left: 2.5rem;
         }
       }
     }
@@ -96,8 +84,12 @@
         text-transform: uppercase;
         text-decoration: none;
         font-size: 1rem;
+        width: 100%;
         letter-spacing: 1px;
         cursor: pointer;
+        @include breakpoint(sm) {
+          width: auto;
+        }
       }
     }
   }

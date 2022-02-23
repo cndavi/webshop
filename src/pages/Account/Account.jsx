@@ -1,18 +1,27 @@
 import styles from './Account.module.scss'
-import Login from '../../components/Login/'
+import Card from '../../components/Card'
 import Footer from '../../components/Footer'
 
-const Account = () => {
+const Account = ({ setPassword, setEmail, handleAction }) => {
   return (
     <>
       <div className={styles.account}>
         <div className={styles.account__image}>
           <img
-            src={require('../../assets/images/heading/img3.jpg')}
+            src={require('../../assets/images/heading/img2.jpg')}
             alt='Records'
           />
         </div>
-        <Login />
+        <div className={styles.account__content}>
+          <Card
+            btnTitle='Login'
+            heading='My account'
+            cardTitle='Login'
+            setEmail={setEmail}
+            setPassword={setPassword}
+            handleAction={handleAction}
+          />
+        </div>
       </div>
       <Footer />
     </>

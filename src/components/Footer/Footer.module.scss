@@ -1,4 +1,72 @@
+@import './../../styles//mixins.scss';
+@import './../../styles//variables.scss';
+
 .footer {
   background: var(--color-black);
-  height: 300px;
+  height: 15rem;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint(sm) {
+    padding: 0 3rem;
+  }
+  @include breakpoint(md) {
+    padding: 0 5rem;
+  }
+  @include breakpoint(lg) {
+    padding: 0 12rem;
+  }
+
+  &__container {
+    margin: auto;
+    width: 100%;
+    max-width: 71.25rem;
+    @include breakpoint(lg) {
+      max-width: 90rem;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+
+      &__left {
+        grid-column-start: span 7;
+        grid-column-end: span 7;
+        display: flex;
+
+        &__mail {
+          @include icon();
+
+          span {
+            margin-left: 0.5rem;
+            font-size: 1.357rem;
+          }
+        }
+
+        &__phone {
+          @include icon();
+
+          span {
+            margin-left: 0.5rem;
+            font-size: 1.357rem;
+          }
+        }
+      }
+
+      &__right {
+        grid-column-start: span 5;
+        grid-column-end: span 5;
+
+        span {
+          color: var(--color-white);
+          font-size: 1.357rem;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
 }
