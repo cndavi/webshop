@@ -1,8 +1,9 @@
-import { useState } from 'react'
 import { GrFormPreviousLink } from 'react-icons/gr'
 import { GrFormNextLink } from 'react-icons/gr'
+import { useState } from 'react'
 import { carouselData } from '../../utils/carouselData'
 import styles from './Carousel.module.scss'
+
 const Carousel = () => {
   const [slideIndex, setSlideIndex] = useState(1)
 
@@ -25,7 +26,7 @@ const Carousel = () => {
   return (
     <>
       <div className={styles.container}>
-        <h2>FEEL THE GROOVE</h2>
+        <h2>Feel the groove</h2>
         <div className={styles.carousel}>
           {carouselData.map((slide, index) => {
             return (

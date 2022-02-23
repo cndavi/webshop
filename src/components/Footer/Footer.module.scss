@@ -8,7 +8,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   @include breakpoint(sm) {
     padding: 0 3rem;
   }

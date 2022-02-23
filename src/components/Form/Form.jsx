@@ -1,6 +1,6 @@
-import { useRef } from 'react'
-import { Link } from 'react-router-dom'
 import FormButton from '../FormButton'
+import { Link } from 'react-router-dom'
+import { useRef } from 'react'
 import styles from './Form.module.scss'
 
 const Form = ({ btnTitle, setPassword, setEmail, handleAction }) => {

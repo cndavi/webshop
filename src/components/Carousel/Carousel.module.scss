@@ -13,6 +13,7 @@
     letter-spacing: 1.5px;
     margin-bottom: 1rem;
     font-size: 1.157rem;
+    text-transform: uppercase;
   }
 }
 
@@ -31,6 +32,8 @@
   }
 
   &__item {
+    background: var(--color-white);
+
     &__slide {
       position: absolute;
       opacity: 0;
