@@ -1,9 +1,7 @@
-const FormButton = ({ btnTitle, handleAction }) => {
+const FormButton = ({ btnTitle }) => {
   return (
     <>
-      <button type='submit' onClick={handleAction}>
-        {btnTitle}
-      </button>
+      <button type='submit'>{btnTitle}</button>
     </>
   )
 }

@@ -11,11 +11,14 @@
     @media (min-width: 75em) {
       @content;
     }
+  } @else if $breakpoint == xlg {
+    @media (min-width: 200em) {
+      @content;
+    }
   }
 }
 
 @mixin icon() {
-  padding: 0.75rem 1rem;
   font-size: 1.4rem;
   a {
     color: var(--color-light);
@@ -29,6 +32,9 @@
   }
   @include breakpoint(lg) {
     font-size: 1.675rem;
+  }
+  @include breakpoint(xlg) {
+    font-size: 1.9rem;
   }
 }
 

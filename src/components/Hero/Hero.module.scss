@@ -20,6 +20,9 @@
     @include breakpoint(lg) {
       max-width: 90rem;
     }
+    @include breakpoint(xlg) {
+      max-width: 120rem;
+    }
 
     &__grid {
       display: grid;

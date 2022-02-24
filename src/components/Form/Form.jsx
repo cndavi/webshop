@@ -1,12 +1,8 @@
 import FormButton from '../FormButton'
 import { Link } from 'react-router-dom'
-import { useRef } from 'react'
 import styles from './Form.module.scss'
 
-const Form = ({ btnTitle, setPassword, setEmail, handleAction }) => {
-  const emailRef = useRef()
-  const passwordRef = useRef()
-
+const Form = ({ btnTitle }) => {
   const onSubmit = (e) => {
     e.preventDefault()
   }
@@ -20,23 +16,13 @@ const Form = ({ btnTitle, setPassword, setEmail, handleAction }) => {
               <div className={styles.form__group__header}>
                 <label>Email</label>
               </div>
-              <input
-                type='email'
-                ref={emailRef}
-                onChange={(event) => setEmail(event.target.value)}
-                required
-              />
+              <input type='email' required />
             </div>
             <div className={styles.form__group}>
               <div className={styles.form__group__header}>
                 <label>Password</label>
               </div>
-              <input
-                type='password'
-                ref={passwordRef}
-                onChange={(event) => setPassword(event.target.value)}
-                required
-              />
+              <input type='password' required />
             </div>
             <div className={styles.form__group}>
               <div className={styles.form__group__space}>
@@ -46,7 +32,7 @@ const Form = ({ btnTitle, setPassword, setEmail, handleAction }) => {
                   </label>
                 </div>
                 <div className={styles.form__group__space__item}>
-                  <p>Forgot Password?</p>
+                  <Link to='/reset'>Forgot Password?</Link>
                 </div>
               </div>
             </div>
@@ -69,23 +55,13 @@ const Form = ({ btnTitle, setPassword, setEmail, handleAction }) => {
               <div className={styles.form__group__header}>
                 <label>Email</label>
               </div>
-              <input
-                type='email'
-                ref={emailRef}
-                onChange={(event) => setEmail(event.target.value)}
-                required
-              />
+              <input type='email' required />
             </div>
             <div className={styles.form__group}>
               <div className={styles.form__group__header}>
                 <label>Password</label>
               </div>
-              <input
-                type='password'
-                ref={passwordRef}
-                onChange={(event) => setPassword(event.target.value)}
-                required
-              />
+              <input type='password' required />
             </div>
             <div className={styles.form__group}>
               <div className={styles.form__group__space}>
@@ -100,7 +76,7 @@ const Form = ({ btnTitle, setPassword, setEmail, handleAction }) => {
         )}
         <div className={styles.form__group}>
           <div className={styles.form__group__btn}>
-            <FormButton btnTitle={btnTitle} handleAction={handleAction} />
+            <FormButton btnTitle={btnTitle} />
           </div>
         </div>
       </form>

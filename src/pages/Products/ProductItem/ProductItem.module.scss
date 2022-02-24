@@ -55,6 +55,10 @@
             padding: 1rem 2.5rem;
             font-size: 1.055rem;
           }
+          @include breakpoint(xlg) {
+            padding: 2rem 3.5rem;
+            font-size: 1.255rem;
+          }
         }
       }
     }
@@ -66,6 +70,9 @@
     @include breakpoint(md) {
       font-size: 1.127rem;
       letter-spacing: 1.5px;
+    }
+    @include breakpoint(xlg) {
+      font-size: 1.257rem;
     }
 
     &__main {

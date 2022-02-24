@@ -11,7 +11,7 @@ const Footer = () => (
           <div className={styles.footer__container__grid__left__mail}>
             <Link to='/'>
               <AiOutlineMail />
-              <span>vinyl-box@gmail.com</span>
+              <span>vinyl-box@box.com</span>
             </Link>
           </div>
           <div className={styles.footer__container__grid__left__phone}>
@@ -22,7 +22,9 @@ const Footer = () => (
           </div>
         </div>
         <div className={styles.footer__container__grid__right}>
-          <span>Designed and built by Carolyn Ndavi © 2022</span>
+          <span className={styles.footer__container__grid__right__copyright}>
+            Designed and built by Carolyn Ndavi © 2022
+          </span>
         </div>
       </div>
     </div>

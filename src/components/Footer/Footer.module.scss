@@ -4,10 +4,12 @@
 .footer {
   background: var(--color-black);
   height: 15rem;
-  padding: 0 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 1.5rem;
   @include breakpoint(sm) {
     padding: 0 3rem;
   }
@@ -19,51 +21,72 @@
   }
 
   &__container {
+    letter-spacing: 1.5px;
     margin: auto;
     width: 100%;
     max-width: 71.25rem;
     @include breakpoint(lg) {
       max-width: 90rem;
     }
+    @include breakpoint(xlg) {
+      max-width: 120rem;
+    }
 
     &__grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: auto;
+      @include breakpoint(lg) {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+      }
 
       &__left {
-        grid-column-start: span 7;
-        grid-column-end: span 7;
-        display: flex;
-
+        @include breakpoint(lg) {
+          grid-column-start: span 7;
+          grid-column-end: span 7;
+          display: flex;
+        }
         &__mail {
           @include icon();
+          padding-bottom: 2rem;
 
           span {
             margin-left: 0.5rem;
-            font-size: 1.357rem;
+            font-size: 1.257rem;
+            @include breakpoint(lg) {
+              font-size: 1.557rem;
+            }
           }
         }
 
         &__phone {
           @include icon();
-
+          padding-bottom: 2rem;
+          @include breakpoint(lg) {
+            margin-left: 2rem;
+          }
           span {
             margin-left: 0.5rem;
-            font-size: 1.357rem;
+            font-size: 1.257rem;
+            @include breakpoint(lg) {
+              font-size: 1.557rem;
+            }
           }
         }
       }
 
       &__right {
-        grid-column-start: span 5;
-        grid-column-end: span 5;
-
-        span {
+        @include breakpoint(lg) {
+          grid-column-start: span 5;
+          grid-column-end: span 5;
+        }
+        &__copyright {
           color: var(--color-white);
-          font-size: 1.357rem;
-          display: flex;
-          justify-content: flex-end;
+          font-size: 1.257rem;
+          @include breakpoint(lg) {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 1.557rem;
+          }
         }
       }
     }

@@ -1,5 +1,6 @@
 @import './../../styles//mixins.scss';
 @import './../../styles//variables.scss';
+
 .container {
   margin: auto;
   max-width: 71.25rem;
@@ -7,13 +8,19 @@
   @include breakpoint(sm) {
     padding: 3rem;
   }
+  @include breakpoint(xlg) {
+    max-width: 100rem;
+  }
 
   h2 {
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 1.5px;
     margin-bottom: 1rem;
     font-size: 1.157rem;
     text-transform: uppercase;
+    @include breakpoint(xlg) {
+      font-size: 1.827rem;
+    }
   }
 }
 
@@ -29,6 +36,9 @@
   }
   @include breakpoint(lg) {
     height: 690px;
+  }
+  @include breakpoint(xlg) {
+    height: 1000px;
   }
 
   &__item {
@@ -80,6 +90,9 @@
       @include breakpoint(md) {
         padding: 2.5rem 2.5rem 3rem 2.5rem;
       }
+      @include breakpoint(xlg) {
+        padding: 4rem 4rem 3rem 4rem;
+      }
 
       &__title {
         font-size: 1.1rem;
@@ -88,7 +101,7 @@
           font-size: 1.4rem;
         }
         @include breakpoint(md) {
-          font-size: 1.575rem;
+          font-size: 1.875rem;
         }
       }
 
@@ -107,6 +120,10 @@
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
+  @include breakpoint(xlg) {
+    max-width: 100rem;
+    font-size: 2.752em;
+  }
 }
 
 @keyframes revealRight {
@@ -116,4 +133,8 @@
   100% {
     transform: scaleX(0);
   }
+}
+
+.breadcrumb {
+  padding: 3rem;
 }

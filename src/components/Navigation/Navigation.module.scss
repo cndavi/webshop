@@ -8,7 +8,6 @@
   background: transparent;
   transition: 0.3s ease all;
   position: fixed;
-  top: 0;
   padding: 0 1.5rem;
   @include breakpoint(sm) {
     padding: 0 3rem;
@@ -36,6 +35,9 @@
       max-width: 90rem;
       padding: 2rem 0;
     }
+    @include breakpoint(xlg) {
+      max-width: 120rem;
+    }
 
     &__logo {
       width: 14rem;
@@ -49,6 +51,9 @@
       letter-spacing: 1.5px;
       @include breakpoint(md) {
         font-size: 1.775rem;
+      }
+      @include breakpoint(xlg) {
+        font-size: 2.575rem;
       }
     }
 
@@ -83,6 +88,9 @@
         width: auto;
         height: 100%;
         position: static;
+      }
+      @include breakpoint(xlg) {
+        font-size: 1.475rem;
       }
 
       ul {
@@ -145,10 +153,12 @@
 
     &__cart {
       @include icon();
+      padding: 0.75rem 1rem;
     }
 
     &__account {
       @include icon();
+      padding: 0.75rem 1rem;
     }
 
     &__toggle {

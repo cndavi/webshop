@@ -64,6 +64,7 @@ const Carousel = () => {
           <GrFormNextLink onClick={nextSlide} />
         </div>
       </div>
+      <div className={styles.breadcrumb}></div>
     </>
   )
 }
