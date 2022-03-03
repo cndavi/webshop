@@ -34,7 +34,7 @@ const Account = () => {
     <>
       <div className={styles.account}>
         <h2 className={styles.account__heading}>
-          Welcome {firstName} {lastName}
+          Welcome {firstName} {lastName}!
         </h2>
         <button className={styles.account__btn} onClick={logout}>
           Logout

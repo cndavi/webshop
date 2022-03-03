@@ -8,15 +8,13 @@
   padding-bottom: 5rem;
   img {
     height: 400px;
-
     align-self: center;
     @include breakpoint(sm) {
       height: auto;
       width: 100%;
     }
     @include breakpoint(md) {
-      width: 100%;
-      height: auto;
+      height: 100vh;
       align-self: center;
     }
   }
@@ -72,14 +70,16 @@
   margin: auto;
   width: 100%;
   max-width: 71.25rem;
-  padding-bottom: 5rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  @include breakpoint(lg) {
-    max-width: 90rem;
+  padding: 2rem 1.5rem;
+  @include breakpoint(sm) {
+    padding: 2rem 3rem;
+  }
+  @include breakpoint(md) {
+    padding: 2rem 5rem;
   }
   @include breakpoint(lg) {
     max-width: 90rem;
+    padding: 5rem 0 10rem 0;
   }
   @include breakpoint(xlg) {
     max-width: 120rem;
@@ -88,7 +88,6 @@
   &__title {
     margin: auto;
     width: 100%;
-    max-width: 71.25rem;
     padding-bottom: 3rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -96,12 +95,8 @@
     border-bottom: 2px solid var(--color-medium-gray);
     font-size: 1.275rem;
     @include breakpoint(lg) {
-      max-width: 90rem;
       font-size: 1.857rem;
       font-weight: 600;
-    }
-    @include breakpoint(xlg) {
-      max-width: 120rem;
     }
   }
 

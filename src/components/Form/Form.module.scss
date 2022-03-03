@@ -63,7 +63,7 @@
       box-sizing: border-box;
       padding: 1rem;
       font-weight: 300;
-      font-size: 1.375rem;
+      font-size: 1.175rem;
       &:active {
         outline: none;
       }
@@ -92,6 +92,17 @@
         @include breakpoint(sm) {
           width: auto;
         }
+      }
+    }
+
+    &__text {
+      line-height: 1.14286;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      a {
+        border-bottom: 1px solid black;
+        margin: 0 0.3rem;
       }
     }
   }
