@@ -18,6 +18,11 @@ const Products = () => {
       </section>
 
       <section className={styles.products}>
+        <h2 className={styles.products__title}>
+          Collection
+          <br />
+        </h2>
+
         <div className={styles.products__container}>
           {productsData.map((item) => (
             <ProductItem item={item} key={item.id} />

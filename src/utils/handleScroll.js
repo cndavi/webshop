@@ -2,7 +2,7 @@ import { scroller } from 'react-scroll'
 
 const handleScroll = () => {
   scroller.scrollTo('carousel', {
-    duration: 900,
+    duration: 1500,
     delay: 0,
     smooth: 'ease',
   })

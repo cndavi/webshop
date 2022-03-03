@@ -11,7 +11,7 @@
   bottom: 0;
   left: 0;
   cursor: default;
-  z-index: 5000;
+  z-index: 2000;
 
   &__wrapper {
     width: 100vw;
@@ -133,6 +133,10 @@
           @include breakpoint(sm) {
             font-size: 1.4rem;
           }
+          @include breakpoint(md) {
+            font-size: 1.4rem;
+            padding: 1.5rem 0;
+          }
         }
       }
     }
@@ -141,15 +145,11 @@
       cursor: pointer;
       position: absolute;
       top: 20px;
-      right: 20px;
+      left: 20px;
       width: 32px;
       height: 32px;
       padding: 0;
-      z-index: 10;
       color: var(--color-dark);
-      @include breakpoint(md) {
-        color: var(--color-light);
-      }
     }
   }
 }

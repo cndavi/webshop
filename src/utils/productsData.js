@@ -25,7 +25,7 @@ export const productsData = [
   },
   {
     id: uuidv4(),
-    title: 'Amy Winehouse',
+    title: 'Linda Jones',
     price: 1800,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -43,8 +43,8 @@ export const productsData = [
   },
   {
     id: uuidv4(),
-    title: 'Ringo Starr',
-    price: 2050,
+    title: 'John Lennon',
+    price: 1050,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     image: record4,
@@ -70,8 +70,8 @@ export const productsData = [
   },
   {
     id: uuidv4(),
-    title: 'Ringo Starr',
-    price: 2050,
+    title: 'Louis Chauvin',
+    price: 1850,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     image: record7,

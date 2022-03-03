@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getFirestore, addDoc, collection } from 'firebase/firestore'
+import { getFirestore, collection, addDoc } from 'firebase/firestore'
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -22,27 +22,33 @@ const auth = getAuth(app)
 const db = getFirestore(app)
 
 const logInWithEmailAndPassword = async (email, password) => {
+  console.log(email)
+  console.log(password)
   try {
     await signInWithEmailAndPassword(auth, email, password)
   } catch (err) {
     console.error(err)
-    alert(err.message)
   }
 }
 
-const registerWithEmailAndPassword = async (name, email, password) => {
+const registerWithEmailAndPassword = async (
+  firstName,
+  lastName,
+  email,
+  password
+) => {
   try {
     const res = await createUserWithEmailAndPassword(auth, email, password)
     const user = res.user
     await addDoc(collection(db, 'users'), {
       uid: user.uid,
-      name,
+      firstName,
+      lastName,
       authProvider: 'local',
       email,
     })
   } catch (err) {
     console.error(err)
-    alert(err.message)
   }
 }
 
@@ -52,7 +58,6 @@ const sendPasswordReset = async (email) => {
     alert('Password reset link sent!')
   } catch (err) {
     console.error(err)
-    alert(err.message)
   }
 }
 
