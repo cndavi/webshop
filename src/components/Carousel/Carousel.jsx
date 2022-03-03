@@ -1,6 +1,7 @@
 import { GrFormPreviousLink } from 'react-icons/gr'
 import { GrFormNextLink } from 'react-icons/gr'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { carouselData } from '../../utils/carouselData'
 import styles from './Carousel.module.scss'
 
@@ -52,14 +53,18 @@ const Carousel = () => {
                     <div className={styles.carousel__text__intro__title}>
                       {slide.title}
                     </div>
-                    <div>{slide.subTitle}</div>
+                    <Link to='/products'>
+                      <button className={styles.carousel__text__intro__btn}>
+                        Find out more
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             )
           })}
         </div>
-        <div className={styles.button}>
+        <div className={styles.arrows}>
           <GrFormPreviousLink onClick={previousSlide} />
           <GrFormNextLink onClick={nextSlide} />
         </div>

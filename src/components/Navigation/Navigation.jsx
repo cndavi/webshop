@@ -120,7 +120,7 @@ const Navigation = () => {
           </div>
 
           <div className={styles.navbar__content__account}>
-            <Link to='/account'>
+            <Link to='/login'>
               <VscAccount />
             </Link>
           </div>

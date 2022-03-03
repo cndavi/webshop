@@ -1,7 +1,7 @@
 import Form from '../Form'
 import styles from './Card.module.scss'
 
-const Card = ({ btnTitle, cardTitle }) => {
+const Card = ({ cardTitle }) => {
   return (
     <>
       <div className={styles.card}>
@@ -12,7 +12,7 @@ const Card = ({ btnTitle, cardTitle }) => {
                 {cardTitle}
               </div>
               <div className={styles.card__wrapper__content__card__content}>
-                <Form btnTitle={btnTitle} />
+                <Form cardTitle={cardTitle} />
               </div>
             </div>
           </div>

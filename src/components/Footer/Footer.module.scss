@@ -10,6 +10,7 @@
   flex-direction: column;
   text-align: center;
   padding: 0 1.5rem;
+
   @include breakpoint(sm) {
     padding: 0 3rem;
   }
@@ -51,8 +52,11 @@
 
           span {
             margin-left: 0.5rem;
-            font-size: 1.257rem;
+            font-size: 1.157rem;
             @include breakpoint(lg) {
+              font-size: 1.257rem;
+            }
+            @include breakpoint(xlg) {
               font-size: 1.557rem;
             }
           }
@@ -66,8 +70,11 @@
           }
           span {
             margin-left: 0.5rem;
-            font-size: 1.257rem;
+            font-size: 1.157rem;
             @include breakpoint(lg) {
+              font-size: 1.257rem;
+            }
+            @include breakpoint(xlg) {
               font-size: 1.557rem;
             }
           }
@@ -81,10 +88,13 @@
         }
         &__copyright {
           color: var(--color-white);
-          font-size: 1.257rem;
+          font-size: 1.1rem;
           @include breakpoint(lg) {
             display: flex;
             justify-content: flex-end;
+            font-size: 1.257rem;
+          }
+          @include breakpoint(xlg) {
             font-size: 1.557rem;
           }
         }

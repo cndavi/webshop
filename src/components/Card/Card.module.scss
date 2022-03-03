@@ -12,11 +12,11 @@
     align-items: center;
     padding-top: 10rem;
     @include breakpoint(md) {
-      padding-top: 11rem;
+      padding-top: 20rem;
     }
     @include breakpoint(lg) {
       max-width: 90rem;
-      padding-top: 19.8rem;
+      padding-top: 30rem;
     }
     @include breakpoint(xlg) {
       padding-top: 35rem;

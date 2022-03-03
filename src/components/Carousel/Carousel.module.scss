@@ -84,6 +84,11 @@
       background: var(--color-white);
       top: 40%;
       letter-spacing: 1.5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
       @include breakpoint(sm) {
         padding: 1rem 1.5rem;
       }
@@ -97,6 +102,9 @@
       &__title {
         font-size: 1.1rem;
         font-weight: 600;
+        text-align: center;
+
+        padding-bottom: 0.5rem;
         @include breakpoint(sm) {
           font-size: 1.4rem;
         }
@@ -105,14 +113,26 @@
         }
       }
 
-      button {
-        display: inline;
+      &__btn {
+        padding: 0.5rem 1.25rem;
+
+        cursor: pointer;
+        font-family: inherit;
+        letter-spacing: 1.5px;
+        border: none;
+        background: var(--color-dark);
+        color: var(--color-light);
+        text-transform: uppercase;
+        @include breakpoint(md) {
+          padding: 1rem 1.75rem;
+          font-size: 1.275rem;
+        }
       }
     }
   }
 }
 
-.button {
+.arrows {
   max-width: 71.25rem;
   margin: auto;
   margin-top: 1rem;
