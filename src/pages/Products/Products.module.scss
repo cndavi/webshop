@@ -13,7 +13,7 @@
       height: auto;
       width: 100%;
     }
-    @include breakpoint(md) {
+    @include breakpoint(xlg) {
       height: 100vh;
       align-self: center;
     }
@@ -67,22 +67,15 @@
 }
 
 .products {
-  margin: auto;
-  width: 100%;
-  max-width: 71.25rem;
-  padding: 2rem 1.5rem;
+  padding: 0 1.5rem 5rem;
   @include breakpoint(sm) {
-    padding: 2rem 3rem;
+    padding: 0 3rem 10rem;
   }
   @include breakpoint(md) {
-    padding: 2rem 5rem;
+    padding: 0 5rem 7rem;
   }
   @include breakpoint(lg) {
-    max-width: 90rem;
-    padding: 5rem 0 10rem 0;
-  }
-  @include breakpoint(xlg) {
-    max-width: 120rem;
+    padding: 0 12rem 7rem;
   }
 
   &__title {
@@ -94,19 +87,34 @@
     color: var(--color-dark);
     border-bottom: 2px solid var(--color-medium-gray);
     font-size: 1.275rem;
+    max-width: 71.25rem;
     @include breakpoint(lg) {
-      font-size: 1.857rem;
+      font-size: 1.657rem;
       font-weight: 600;
+      max-width: 90rem;
+    }
+    @include breakpoint(xlg) {
+      font-size: 1.857rem;
+      max-width: 120rem;
     }
   }
 
   &__container {
     display: grid;
+    margin: auto;
+    width: 100%;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     padding-top: 4rem;
+    max-width: 71.25rem;
     @include breakpoint(sm) {
       grid-gap: 2rem;
+    }
+    @include breakpoint(lg) {
+      max-width: 90rem;
+    }
+    @include breakpoint(xlg) {
+      max-width: 120rem;
     }
   }
 }
