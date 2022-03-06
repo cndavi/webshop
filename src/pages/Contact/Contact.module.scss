@@ -26,21 +26,14 @@
 
 .card {
   position: relative;
+  height: 100vh;
 
   &__wrapper {
     width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20rem;
-    @include breakpoint(lg) {
-      max-width: 90rem;
-      padding-top: 30rem;
-    }
-    @include breakpoint(xlg) {
-      padding-top: 35rem;
-    }
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 
     &__content {
       display: flex;
@@ -57,11 +50,7 @@
         color: var(--color-black);
         margin: 0 1.5rem 1.5rem;
         letter-spacing: 1px;
-        width: 25rem;
         padding: 3rem;
-        @include breakpoint(sm) {
-          width: 40rem;
-        }
         @include breakpoint(md) {
           width: 60rem;
           padding: 6rem;
